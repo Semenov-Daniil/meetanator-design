@@ -1,0 +1,24 @@
+/* 
+    Author: Semenov Daniil
+    GitHub: https://github.com/Semenov-Daniil
+    Global style variables
+    Copyright
+*/
+
+/* Fonts varibles */
+:root {
+    --h-font-family-r: "Ubuntu-Regular";
+    --h-font-family-m: "Ubuntu-Medium";
+
+    --p-font-family-r: "Rubik-Regular";
+    --p-font-family-m: "Rubik-Medium";
+
+    --font-size: 20px;
+
+    --color: #FFFFFF;
+}
+
+/* Colors varibles */
+:root {
+    --main-bg-color: #010314;
+}

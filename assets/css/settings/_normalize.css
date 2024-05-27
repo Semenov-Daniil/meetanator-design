@@ -1,0 +1,62 @@
+/* 
+    Author: Semenov Daniil
+    GitHub: https://github.com/Semenov-Daniil
+    Resetting CSS styles
+    Copyright
+*/
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    position: relative;
+}
+
+body {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+a {
+    text-decoration: none;
+    
+    color: inherit;
+
+    white-space: nowrap;
+}
+
+
+button {
+    cursor: pointer;
+
+    border: none;
+
+    background-color: transparent;
+
+    white-space: nowrap;
+}
+
+input {
+    background-color: transparent;
+    
+    border: none;
+    
+    outline: none;
+}
+
+li {
+    list-style: none;
+}
