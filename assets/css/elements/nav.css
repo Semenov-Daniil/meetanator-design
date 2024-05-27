@@ -1,0 +1,15 @@
+/* 
+    Author: Semenov Daniil
+    GitHub: https://github.com/Semenov-Daniil
+    Nav style
+    Copyright
+*/
+
+nav {
+    width: 100%;
+}
+
+.nav-menu-item {
+    width: fit-content;
+    height: fit-content;
+}

@@ -1,0 +1,22 @@
+/* 
+    Author: Semenov Daniil
+    GitHub: https://github.com/Semenov-Daniil
+    Logo style
+    Copyright
+*/
+
+.logo {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-family: var(--h-font-family-m);
+    font-size: 25px;
+
+    & img {
+        position: relative;
+        transform: translateY(12%);
+    }
+}

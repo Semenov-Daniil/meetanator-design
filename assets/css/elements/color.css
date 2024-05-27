@@ -1,0 +1,10 @@
+/* 
+    Author: Semenov Daniil
+    GitHub: https://github.com/Semenov-Daniil
+    Colors style
+    Copyright
+*/
+
+.bottom-gradient {
+    background: radial-gradient(140% 110% at 50% 10%, transparent 40%, var(--main-color) 70%, rgb(255, 255, 255) 100%);
+}

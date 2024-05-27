@@ -1,0 +1,11 @@
+/* 
+    Author: Semenov Daniil
+    GitHub: https://github.com/Semenov-Daniil
+    Contanier style
+    Copyright
+*/
+
+.container {
+    width: clamp(300px, 95%, 1820px);
+    height: 100%;
+}

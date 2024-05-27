@@ -1,0 +1,103 @@
+/* 
+    Author: Semenov Daniil
+    GitHub: https://github.com/Semenov-Daniil
+    Buttons style
+    Copyright
+*/
+
+.btn {
+    position: relative;
+
+    padding: 0.8em 1.2em;
+
+    border: 1px solid transparent;
+    border-radius: 10px;
+
+    transition: border-color 0.3s,
+                color 0.3s,
+                box-shadow 0.3s,
+                background-color 0.5s;
+}
+
+.primary-button {
+    background: var(--main-bg-color);
+
+    &::before {
+        content: "";
+        position: absolute;
+
+        inset: 0;
+
+        border: 2px solid transparent;
+        border-radius: inherit; 
+
+        background: linear-gradient(to bottom, var(--main-bg-color) 30%, rgba(var(--main-bg-color-rgb), 0)) border-box,
+                    linear-gradient(90deg, var(--sec-color), var(--main-color) 50%, var(--sec-color)) border-box;
+        background-size: 100% 1%;
+
+
+        -webkit-mask:
+            linear-gradient(#fff 0 0) padding-box, 
+            linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+                mask-composite: exclude;
+
+        transition: all 0.8s;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+
+        height: 50%;
+        width: 80%;
+
+        bottom: 10px;
+        left: 50%;
+
+        transform: translateX(-50%);
+
+        z-index: -1;
+        
+        background: linear-gradient(90deg, var(--sec-color), var(--main-color) 50%, var(--sec-color));
+        filter: blur(10px);
+
+        border-radius: 0%;
+
+        opacity: 0;
+
+        transition: all 0.5s;
+    }
+
+
+    &:hover {
+        border-color: transparent;
+    }
+
+    &:hover::before {
+        background-size: 100% 100%;
+    }
+
+    &:hover::after {
+        opacity: 1;
+
+        width: 100%;
+
+        bottom: -5px;
+
+        border-radius: 50%;
+    }
+
+    &:active {
+        color: rgba(var(--color-rgb), 0.7);
+    }
+
+    &:active::after {
+        width: 105%;
+        bottom: -8px;
+    }
+
+    &:active::before {
+        background-size: 100% 150%;
+    }
+}

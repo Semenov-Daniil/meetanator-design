@@ -1,0 +1,40 @@
+/* 
+    Author: Semenov Daniil
+    GitHub: https://github.com/Semenov-Daniil
+    Links style
+    Copyright
+*/
+
+a {
+    display: block;
+
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-link {
+    font-size: 18px;
+
+    padding: 0.6em 1.1em;
+
+    border-radius: 10px;
+
+    &:hover {
+        background-color: rgba(var(--sec-color-rgb), 0.2);
+    }
+
+    &:active {
+        color: rgba(var(--color-rgb), 0.7);
+    }
+}
+
+.nav-pr-link {
+    font-size: 20px;
+
+    &:hover {
+        color: var(--sec-color);
+    }
+
+    &:active {
+        color: rgba(var(--sec-color-rgb), 0.7);
+    }   
+}

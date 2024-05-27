@@ -13,23 +13,6 @@
     box-sizing: border-box;
 }
 
-html {
-    position: relative;
-}
-
-body {
-    position: relative;
-
-    display: flex;
-    flex-direction: column;
-
-    min-height: 100vh;
-}
-
-main {
-    flex: 1;
-}
-
 a {
     text-decoration: none;
     

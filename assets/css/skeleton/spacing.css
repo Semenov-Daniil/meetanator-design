@@ -1,0 +1,15 @@
+/* 
+    Author: Semenov Daniil
+    GitHub: https://github.com/Semenov-Daniil
+    Padding, margin style
+    Copyright
+*/
+
+.p-inl {
+    padding-inline: 50px;
+}
+
+.py-4 {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
