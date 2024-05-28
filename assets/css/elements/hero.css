@@ -1,0 +1,31 @@
+/* 
+    Author: Semenov Daniil
+    GitHub: https://github.com/Semenov-Daniil
+    Hero section style
+    Copyright
+*/
+
+.hero {
+    & .slogan-wrapp, .mobile-wrapp {
+        flex: 1;
+    }
+
+    & .slogan-wrapp > .primary-button {
+        font-size: 25px;
+
+        background: rgba(var(--main-bg-color-rgb), 0.8);
+        backdrop-filter: blur(10px);
+    }
+
+    & .slogan {
+        font-family: var(--h-font-family-m);
+        font-size: 100px;
+        color: var(--color);
+    }
+
+    & .desc {
+        font-family: var(--p-font-family-m);
+        font-size: 20px;
+        color: var(--thi-color);
+    }
+}

@@ -8,6 +8,13 @@
 a {
     display: block;
 
+    width: fit-content;
+    height: fit-content;
+
+    color: inherit;
+
+    white-space: nowrap;
+
     transition: background-color 0.3s, color 0.3s;
 }
 

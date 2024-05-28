@@ -1,0 +1,11 @@
+/* 
+    Author: Semenov Daniil
+    GitHub: https://github.com/Semenov-Daniil
+    Video style
+    Copyright
+*/
+
+.video-wrapp {
+    position: relative;
+    z-index: 2;
+}

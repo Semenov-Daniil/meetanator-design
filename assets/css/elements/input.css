@@ -1,0 +1,182 @@
+/* 
+    Author: Semenov Daniil
+    GitHub: https://github.com/Semenov-Daniil
+    Input style
+    Copyright
+*/
+
+input:not([type="checkbox"]),
+textarea {
+    width: 100%;
+
+    padding: 0.8em 1.2em;
+
+    background-color: rgba(var(--main-bg-color-rgb), 0.2);
+
+    border-radius: 10px;
+
+    font-family: var(--p-font-family-r);
+    font-size: 20px;
+    color: inherit;
+
+    overflow: hidden;
+}
+
+textarea {
+    max-width: 100%;
+    min-width: 100%;
+    min-height: calc(20px + 0.8em*2);
+}
+
+label {
+    cursor: pointer;
+}
+
+.input-wrapp {
+    position: relative;
+
+    & label {
+        position: absolute;
+
+        display: block;
+
+        top: 0.8em;
+        left: 1.2rem;
+
+        font-size: 20px;
+        color: rgba(var(--color-rgb), 0.5);
+
+        transition: color 0.3s,
+                    left 0.8s,
+                    top 0.8s,
+                    font-size 0.8s;
+    }
+
+    & input:hover~label,
+    input:focus~label,
+    input:not(:placeholder-shown)~label,
+    textarea:hover~label,
+    textarea:focus~label,
+    textarea:not(:placeholder-shown)~label {
+        color: var(--sec-color);
+    }
+
+    & input:focus~label,
+    input:not(:placeholder-shown)~label,
+    textarea:focus~label,
+    textarea:not(:placeholder-shown)~label {
+        font-size: 18px;
+
+        left: -1em;
+        top: -0.8em;
+    }
+
+    & .input-border-gradient {
+        &::before {
+            content: "";
+            position: absolute;
+    
+            z-index: -2;
+    
+            inset: 0;
+    
+            border: 2px solid transparent;
+            border-radius: 10px; 
+    
+            background: linear-gradient(to right, var(--sec-color) 0%, rgba(var(--fou-color-rgb), 0) 80%) border-box;
+            background-repeat: no-repeat;
+
+            -webkit-mask:
+                linear-gradient(#fff 0 0) padding-box, 
+                linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+                    mask-composite: exclude;
+    
+            opacity: 0;
+    
+            transition: all 0.8s;
+        }
+    }
+
+    & input:hover~.input-border-gradient::before,
+    input:focus~.input-border-gradient::before,
+    input:not(:placeholder-shown)~.input-border-gradient::before,
+    textarea:hover~.input-border-gradient::before,
+    textarea:focus~.input-border-gradient::before,
+    textarea:not(:placeholder-shown)~.input-border-gradient::before {
+        opacity: 1;
+    }
+
+    & input:focus~.input-border-gradient::before,
+    input:not(:placeholder-shown)~.input-border-gradient::before,
+    textarea:focus~.input-border-gradient::before,
+    textarea:not(:placeholder-shown)~.input-border-gradient::before {
+        background: linear-gradient(5deg, var(--sec-color), rgba(var(--fou-color-rgb), 0) 40%) border-box;
+    }
+}
+
+.time-wrapp {
+    & .input-wrapp {
+        width: 100%;
+    }
+
+    & img {
+        width: 50px;
+    }
+}
+
+.checkbox-wrapp {
+    & input {
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+    }
+
+    & label {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        width: fit-content;
+
+        border-radius: 10px;
+        
+        padding: 0.8em 1.2em;
+
+        color: rgba(var(--color-rgb), 0.5);
+
+        transition: all 0.3s;
+    }
+    
+    & label::before {
+        content: '';
+        display: inline-block;
+        width: 1em;
+        height: 1em;
+        border: 2px solid rgba(var(--color-rgb), 0.5);
+        border-radius: 5px;
+
+        transition: all 0.3s;
+    }
+
+    & input:hover~label,
+    input:focus~label {
+        color: var(--color);
+        background-color: rgba(var(--main-bg-color-rgb), 0.2);
+    }
+
+    & input:hover~label::before,
+    input:focus~label::before {
+        border-color: var(--color);
+    }
+
+    & input:checked~label::before {
+        border-color: var(--sec-color);
+        background-color: var(--sec-color);
+    }
+
+    & input:checked~label {
+        color: var(--color);
+    }
+}
+

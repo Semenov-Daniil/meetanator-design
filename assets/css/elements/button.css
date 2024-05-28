@@ -5,6 +5,18 @@
     Copyright
 */
 
+button {
+    width: fit-content;
+
+    font-size: 20px;
+    color: inherit;
+    white-space: nowrap;
+
+    background-color: transparent;
+
+    cursor: pointer;
+}
+
 .btn {
     position: relative;
 
@@ -33,7 +45,8 @@
 
         background: linear-gradient(to bottom, var(--main-bg-color) 30%, rgba(var(--main-bg-color-rgb), 0)) border-box,
                     linear-gradient(90deg, var(--sec-color), var(--main-color) 50%, var(--sec-color)) border-box;
-        background-size: 100% 1%;
+        background-size: 100% 0%;
+        background-repeat: no-repeat;
 
 
         -webkit-mask:

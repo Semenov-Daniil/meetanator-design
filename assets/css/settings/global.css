@@ -28,4 +28,9 @@
     --main-color-rgb: 14, 7, 215;
     --sec-color: #9747FF;
     --sec-color-rgb: 151, 71, 255;
+    --thi-color: #B3B3B3;
+    --fou-color: #FFFFFF;
+    --fou-color-rgb: 255, 255, 255;
+
+    --glass-color: rgba(255, 255, 255, 0.1);
 }

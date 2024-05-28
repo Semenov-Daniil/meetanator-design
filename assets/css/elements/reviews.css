@@ -1,0 +1,70 @@
+/* 
+    Author: Semenov Daniil
+    GitHub: https://github.com/Semenov-Daniil
+    Reviews section style
+    Copyright
+*/
+
+.reviews {
+    background: radial-gradient(30% 68% at 50% 50%, rgba(var(--main-color-rgb), 0.2) 0%, transparent 100%);
+
+    & .review-item {
+        align-items: end;
+
+        & .review-avatar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            width: 120px;
+            height: 120px;
+
+            border-radius: 50%;
+
+            overflow: hidden;
+
+            & img {
+                width: auto;
+                height: auto;
+
+                max-height: 100%;
+            }
+        }
+
+        & .review-body {
+            max-width: 50%;
+
+            border-radius: 45px 45px 45px 2px;
+
+            padding: 25px 45px;
+
+            background: var(--glass-color);
+            backdrop-filter: blur(10px);
+        }
+
+        & .review-title {
+            align-items: end;
+        }
+
+        & .review-name {
+            font-size: 20px;
+            color: var(--sec-color);
+        }
+
+        & .review-desc {
+            font-size: 15px;
+        }
+
+        & .review-text {
+            font-size: 25px;
+        }
+    }
+
+    & .right-item {
+        flex-direction: row-reverse;
+
+        & .review-body {
+            border-radius: 45px 45px 2px 45px;
+        }
+    }
+}

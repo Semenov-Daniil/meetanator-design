@@ -1,0 +1,64 @@
+/* 
+    Author: Semenov Daniil
+    GitHub: https://github.com/Semenov-Daniil
+    Blick style
+    Copyright
+*/
+
+.blick {
+    position: absolute;
+    top: 0;
+
+    width: 80%;
+    height: fit-content;
+
+    transform: translateY(-20%);
+
+    &::before {
+        content: "";
+
+        position: relative;
+
+        display: block;
+
+        width: 50%;
+        aspect-ratio: 19;
+
+        top: 0;
+        left: 50%;
+
+        transform: translateX(-50%);
+
+        border-bottom: 1px solid;
+        border-image-source: linear-gradient(90deg, transparent, rgba(var(--sec-color-rgb), 0.5) 50%, transparent 100%);
+        border-image-slice: 1;
+
+        background: radial-gradient(50% 100% at 50% 100%, rgba(var(--sec-color-rgb), 0.1) 0, transparent 100%);
+    }
+
+    &::after {
+        content: "";
+
+        position: relative;
+
+        display: block;
+
+        width: 100%;
+        aspect-ratio: 23;
+
+        border-top: 1px solid;
+        border-image-source: linear-gradient(90deg, transparent, rgba(var(--sec-color-rgb), 0.5) 50%, transparent 100%);
+        border-image-slice: 1;
+
+        background: radial-gradient(50% 100% at 50% 0%, rgba(var(--sec-color-rgb), 0.1) 0, transparent 100%);
+    }
+}
+
+.blick-wrapp {
+    padding-top: 150px;
+
+    & .blick {
+        position: absolute;
+        top: 0px;
+    }
+}
