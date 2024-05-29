@@ -147,10 +147,10 @@
             <div class="container p-cnt top-radius top-gradient d-flex flex-col ai-c jc-c">
                 <div class="container-sm d-flex flex-col ai-c jc-c g-3">
                     <h1 class="cnt-title">Создание встречи</h1>
-                    <div class="create-form-wrapp">
+                    <div class="form-wrapp">
                         <form class="create-form d-flex flex-col g-3" action="#">
-                            <div class="inputs-wrapp d-flex g-5">
-                                <div class="d-flex flex-col g-3">
+                            <div class="d-flex g-5">
+                                <div class="inputs-wrapp d-flex flex-col g-3">
                                     <div class="input-wrapp">
                                         <input id="title" type="text" placeholder="">
                                         <div class="input-border-gradient"></div>
@@ -195,9 +195,7 @@
                                     </div>
                                 </div>
                                 <div class="calendar-wrapp">
-                                    <button id="calendar-btn-prev" type="button"></button>
-                                    <button id="calendar-btn-next" type="button"></button>
-                                    <div id="calendar"></div>
+                                    <div class="calendar"></div>
                                 </div>
                             </div>
                             <button class="btn primary-button" type="submit">Создать встречу</button>
@@ -206,8 +204,81 @@
                 </div>
             </div>
         </section>
+        <section class="auth d-flex flex-col ai-c jc-c">
+            <div class="blick"></div>
+            <div class="container p-cnt bottom-radius bottom-gradient d-flex flex-col ai-c jc-c">
+                <div class="container-sm d-flex flex-col ai-c jc-c g-3">
+                    <h1 class="cnt-title">Войти в систему</h1>
+                    <div class="container-md form-wrapp">
+                        <form class="auth-form d-flex flex-col g-3" action="#">
+                            <div class="d-flex flex-col g-3">
+                                <div class="input-wrapp">
+                                    <input id="au_email" type="email" placeholder="">
+                                    <div class="input-border-gradient"></div>
+                                    <label for="au_email">Email</label>
+                                </div>
+                                <div class="input-wrapp">
+                                    <input id="au_password" type="password" placeholder="">
+                                    <div class="input-border-gradient"></div>
+                                    <label for="au_password">Пароль</label>
+                                </div>
+                            </div>
+                            <button class="btn primary-button" type="submit">Войти</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
-    <footer></footer>
+    <footer class="footer d-flex flex-col ai-c jc-c">
+        <div class="container d-flex flex-col ai-c jc-c">
+            <div class="container-md">
+                <div class="footer-cnt-up d-flex jc-sb">
+                    <div class="footer-logo d-flex flex-col g-1">
+                        <div class="logo-cnt">
+                            <a class="logo" href="#">
+                                <img src="./assets/media/logo.svg" alt="Logo meetanator">
+                                meetanator.
+                            </a>
+                        </div>
+                        <p>Сервис, с которым удобно!</p>
+                    </div>
+                    <div class="footer-contacts">
+                        <ul class="footer-list d-flex flex-col g-2">
+                            <li class="footer-item d-flex g-1">
+                                <img src="./assets/media/icons/mail.svg" alt="Почта">
+                                <a href="mail:meet@nator.ru">meet@nator.ru</a>
+                            </li>
+                            <li class="footer-item d-flex g-1">
+                                <img src="./assets/media/icons/phone.svg" alt="Телефон">
+                                <a href="tel:88009997766">+7 (800) 999 77-66</a>
+                            </li>
+                            <li class="footer-item d-flex g-1">
+                                <img src="./assets/media/icons/phone.svg" alt="Телефон">
+                                <a href="tel:48009997766">+4 (800) 999 77-66</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-docs">
+                        <ul class="footer-list d-flex flex-col g-2">
+                            <li class="footer-item d-flex g-1">
+                                <img src="./assets/media/icons/folder.svg" alt="Документ">
+                                <a href="./assets/docs/konfidencialnost.txt" download="">Политика конфиденциальности</a>
+                            </li>
+                            <li class="footer-item d-flex g-1">
+                                <img src="./assets/media/icons/folder.svg" alt="Документ">
+                                <a href="./assets/docs/soglashenie.txt" download="">Пользовательское соглашение</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-blick"></div>
+                <div class="footer-copy d-flex ai-c jc-c">
+                    &copy; 2024 meetanator. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script type="module" src="./assets/js/app.js"></script>
 </body>

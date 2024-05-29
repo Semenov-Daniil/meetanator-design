@@ -1,0 +1,166 @@
+/* 
+    Author: Semenov Daniil
+    GitHub: https://github.com/Semenov-Daniil
+    Calendar style
+    Copyright
+*/
+
+.calendar-wrapp {
+    display: flex;
+    justify-content: center;
+}
+
+.calendar {
+    position: relative;
+
+    width: 405px;
+    height: fit-content;
+    
+    padding: 15px;
+    
+    font-family: var(--p-font-family-m);
+    font-size: 18px;
+    color: var(--main-bg-color);
+    
+    background: rgba(var(--fou-color-rgb), 0.8);
+    
+    box-shadow: inset 0 0 0 1px hsla(0,0%,100%,.12), 0 0 0 1px rgba(0,0,0,.04);
+
+    border-radius: 10px;
+    
+    overflow: hidden;
+}
+
+.calendar .calendar-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.calendar .calendar-inner .calendar-body {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+}
+
+.calendar .calendar-inner .calendar-body div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    width: 45px;
+    height: 45px;
+
+    background: transparent;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+}
+
+.calendar .calendar-inner .calendar-body div:hover {
+    color: var(--sec-color);
+    background: rgba(var(--main-bg-color-rgb), 0.2);
+}
+
+.calendar .calendar-inner .calendar-body div>a {
+    color: var(--calendar-font-color);
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+}
+
+.calendar .calendar-inner .calendar-controls {
+    display: flex;
+    justify-content: space-between;
+}
+
+.calendar .calendar-inner .calendar-controls .calendar-prev,
+.calendar .calendar-inner .calendar-controls .calendar-next {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 45px;
+    height: 45px;
+
+    border-radius: 10px;
+
+    background: rgba(var(--fou-color-rgb), 0.9);
+
+    box-shadow: 0 4px 10px 2px rgba(var(--main-bg-color-rgb), 0.3);
+
+    transition: box-shadow 0.3s;
+
+    & svg {
+        height: 40%;
+        width: auto;
+
+        stroke: var(--thi-color);
+        stroke-width: 3;
+    }
+}
+
+.calendar .calendar-inner .calendar-controls .calendar-prev:hover,
+.calendar .calendar-inner .calendar-controls .calendar-next:hover {
+    box-shadow: 0 6px 10px 3px rgba(var(--sec-color-rgb), 0.3);
+}
+
+.calendar .calendar-inner .calendar-today-date {
+    color: var(--thi-color);
+    text-align: center;
+
+    cursor: pointer;
+
+    background: rgba(var(--fou-color-rgb), 0.5);
+
+    padding: 8px 0px;
+
+    box-shadow: inset 0 0 0 1px hsla(0,0%,100%,.12), 0 0 0 1px rgba(0,0,0,.04);
+    border-radius: 10px;
+
+    width: 80%;
+
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.calendar .calendar-inner .calendar-weekday {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+}
+
+.calendar .calendar-inner .calendar-weekday > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 45px;
+    height: 45px;
+    border-radius: 10px;
+
+    color: var(--thi-color);
+}
+
+.calendar .calendar-inner .calendar-controls .calendar-year-month {
+    display: flex;
+    min-width: 100px;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 10px;
+}
+
+.calendar .calendar-inner .calendar-body .calendar-active {
+    color: var(--fou-color);
+    background: var(--sec-color);
+}
+
+.calendar .calendar-inner .calendar-body .prev-dates,
+.calendar .calendar-inner .calendar-body .next-dates {
+    color: var(--thi-color);
+    pointer-events: none;
+}

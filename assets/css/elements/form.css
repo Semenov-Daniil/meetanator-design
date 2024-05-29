@@ -1,0 +1,23 @@
+/* 
+    Author: Semenov Daniil
+    GitHub: https://github.com/Semenov-Daniil
+    Form style
+    Copyright
+*/
+
+form {
+    width: 100%;
+}
+
+.form-wrapp {
+    width: 100%;
+
+    padding: 50px;
+
+    backdrop-filter: blur(10px);
+    background: rgba(var(--fou-color), 0.8);
+
+    box-shadow: inset 0 0 0 1px hsla(0,0%,100%,.12), 0 0 0 1px rgba(0,0,0,.04);
+
+    border-radius: 10px;
+}
