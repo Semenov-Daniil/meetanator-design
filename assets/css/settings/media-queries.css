@@ -4,3 +4,47 @@
     Media queries
     Copyright
 */
+
+@media only screen and (max-width: 1150px) {
+    .header .nav-menu-wrapp {
+        position: absolute;
+        opacity: 0;
+        z-index: -100;
+    }
+
+    .header .mobile-menu {
+        opacity: 1;
+        position: relative;
+        z-index: inherit;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .container {
+        width: 100%;
+    }
+
+    .reviews {
+        & .review-item {
+            & .review-body {
+                width: 100%;
+            }
+        }
+    }
+
+    .create .create-form .time-wrapp img {
+        opacity: 0;
+        z-index: -100;
+        position: absolute;
+    }
+
+    .create .create-form .time-wrapp {
+        gap: 30px;
+    }
+
+    .footer .footer-cnt-up {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+}

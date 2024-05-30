@@ -10,7 +10,8 @@
 }
 
 .create .form-wrapp .create-form > div > div {
-    max-width: 50%;
+    /* max-width: 50%; */
+    flex: 1;
 }
 
 .create .form-wrapp .create-form > div .calendar-wrapp {

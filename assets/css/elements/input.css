@@ -16,7 +16,7 @@ textarea {
     border-radius: 10px;
 
     font-family: var(--p-font-family-r);
-    font-size: 20px;
+    font-size: 1rem;
     color: inherit;
 
     overflow: hidden;
@@ -43,7 +43,7 @@ label {
         top: 0.8em;
         left: 1.2rem;
 
-        font-size: 20px;
+        font-size: 1rem;
         color: rgba(var(--color-rgb), 0.5);
 
         transition: color 0.3s,
@@ -65,7 +65,7 @@ label {
     input:not(:placeholder-shown)~label,
     textarea:focus~label,
     textarea:not(:placeholder-shown)~label {
-        font-size: 18px;
+        font-size: 0.92rem;
 
         left: -1em;
         top: -0.8em;
@@ -152,9 +152,9 @@ label {
         content: '';
         display: inline-block;
         width: 1em;
-        height: 1em;
+        aspect-ratio: 1;
         border: 2px solid rgba(var(--color-rgb), 0.5);
-        border-radius: 5px;
+        border-radius: 0.25rem;
 
         transition: all 0.3s;
     }

@@ -8,7 +8,6 @@
 @import url("./settings/fonts.css");
 @import url("./settings/global.css");
 @import url("./settings/main.css");
-@import url("./settings/media-queries.css");
 
 /* Generic */
 @import url("./generic/flex.css");
@@ -38,3 +37,6 @@
 /* Sceleton */
 @import url("./skeleton/container.css");
 @import url("./skeleton/spacing.css");
+
+/* Media queries */
+@import url("./settings/media-queries.css");

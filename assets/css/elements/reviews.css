@@ -16,8 +16,9 @@
             align-items: center;
             justify-content: center;
 
-            width: 120px;
-            height: 120px;
+            width: clamp(20px, 15vw, 120px);
+            height: clamp(20px, 15vw, 120px);
+            aspect-ratio: 1;
 
             border-radius: 50%;
 
@@ -32,11 +33,11 @@
         }
 
         & .review-body {
-            max-width: 50%;
+            width: 50%;
 
-            border-radius: 45px 45px 45px 2px;
+            border-radius: 2rem 2rem 2rem 0.01rem;
 
-            padding: 25px 45px;
+            padding: 1rem 2rem;
 
             background: var(--glass-color);
             backdrop-filter: blur(10px);
@@ -47,16 +48,16 @@
         }
 
         & .review-name {
-            font-size: 20px;
+            font-size: 1rem;
             color: var(--sec-color);
         }
 
         & .review-desc {
-            font-size: 15px;
+            font-size: calc(3/4rem);
         }
 
         & .review-text {
-            font-size: 25px;
+            font-size: 1.2rem;
         }
     }
 
@@ -64,7 +65,7 @@
         flex-direction: row-reverse;
 
         & .review-body {
-            border-radius: 45px 45px 2px 45px;
+            border-radius: 2rem 2rem 0.01rem 2rem;
         }
     }
 }

@@ -6,22 +6,22 @@
 */
 
 .footer {
-    font-size: 18px;
+    font-size: 0.9rem;
 }
 
 .footer .footer-cnt-up {
-    padding-block: 50px;
+    padding-block: 2.2rem;
 }
 
 .footer .footer-list .footer-item img {
-    width: 20px;
+    width: 1rem;
     height: auto;
 }
 
 .footer .footer-copy {
     padding-block: 10px;
 
-    font-size: 15px;
+    font-size: 0.75rem;
 }
 
 .footer .footer-blick {

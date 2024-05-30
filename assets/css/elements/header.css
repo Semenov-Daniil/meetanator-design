@@ -4,3 +4,48 @@
     Header style
     Copyright
 */
+.header nav {
+    padding-block: 2rem;
+}
+
+.header .mobile-menu {
+    opacity: 0;
+    position: absolute;
+    z-index: -100;
+
+    width: 1.8rem;
+    aspect-ratio: 1;
+
+    & span {
+        display: block;
+
+        position: absolute;
+
+        width: 0.6rem;
+        aspect-ratio: 1;
+        
+        background: var(--fou-color);
+
+        border-radius: 100%;
+    }
+
+    & span:nth-child(1) {
+        top: 0;
+        left: 0;
+    }
+
+    & span:nth-child(2) {
+        top: 0;
+        right: 0;
+    }
+
+    & span:nth-child(3) {
+        bottom: 0;
+        left: 0;
+    }
+
+    & span:nth-child(4) {
+        bottom: 0;
+        right: 0;
+    }
+}

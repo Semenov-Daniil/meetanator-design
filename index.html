@@ -8,7 +8,7 @@
 </head>
 <body>
     <header class="header d-flex ai-c jc-c">
-        <nav class="container d-flex ai-c jc-sb py-4">
+        <nav class="container d-flex ai-c jc-sb">
             <div class="logo-cnt">
                 <a class="logo" href="#">
                     <img src="./assets/media/logo.svg" alt="Logo meetanator">
@@ -42,6 +42,12 @@
                     </li> 
                 </ul>
             </div>
+            <div class="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </nav>
     </header>
     <main>
@@ -61,7 +67,7 @@
             <div class="container p-cnt d-flex flex-col ai-c jc-c">
                 <div class="container-sm d-flex flex-col ai-c jc-c g-3">
                     <h1 class="cnt-title">О нас</h1>
-                    <div class="about-list d-flex g-3">
+                    <div class="about-list d-flex g-3 flex-wrapp">
                         <div class="d-flex flex-col g-3">
                             <div class="about-item">
                                 <h2 class="about-item-title">&gt; 4000 пользователей</h2>
@@ -108,7 +114,7 @@
                                 <img src="./assets/media/images/human1.jpg" alt="Аватар">
                             </div>
                             <div class="review-body d-flex flex-col g-2">
-                                <div class="review-title d-flex g-1">
+                                <div class="review-title d-flex g-1 flex-wrapp">
                                     <h2 class="review-name">John Trump</h2>
                                     <p class="review-desc">Senior PHP dev, USA</p>
                                 </div>
@@ -120,7 +126,7 @@
                                 <img src="./assets/media/images/human2.jpg" alt="Аватар">
                             </div>
                             <div class="review-body d-flex flex-col g-2">
-                                <div class="review-title d-flex g-1">
+                                <div class="review-title d-flex g-1 flex-wrapp">
                                     <h2 class="review-name">Анна Михайловна</h2>
                                     <p class="review-desc">Junior python dev, Russia</p>
                                 </div>
@@ -131,8 +137,8 @@
                             <div class="review-avatar">
                                 <img src="./assets/media/images/human3.jpg" alt="Аватар">
                             </div>
-                            <div class="review-body d-flex flex-col g-2">
-                                <div class="review-title d-flex g-1">
+                            <div class="review-body d-flex flex-col g-2 ">
+                                <div class="review-title d-flex g-1 flex-wrapp">
                                     <h2 class="review-name">Александр Иванов</h2>
                                     <p class="review-desc">Тестировщик, USA</p>
                                 </div>
@@ -148,8 +154,8 @@
                 <div class="container-sm d-flex flex-col ai-c jc-c g-3">
                     <h1 class="cnt-title">Создание встречи</h1>
                     <div class="form-wrapp">
-                        <form class="create-form d-flex flex-col g-3" action="#">
-                            <div class="d-flex g-5">
+                        <form class="create-form d-flex flex-col ai-c g-3" action="#">
+                            <div class="d-flex g-5 flex-wrapp">
                                 <div class="inputs-wrapp d-flex flex-col g-3">
                                     <div class="input-wrapp">
                                         <input id="title" type="text" placeholder="">
@@ -171,7 +177,7 @@
                                         <div class="input-border-gradient"></div>
                                         <label for="cr_password">Пароль</label>
                                     </div>
-                                    <div class="time-wrapp d-flex g-5">
+                                    <div class="time-wrapp d-flex g-5 flex-wrapp">
                                         <div class="input-wrapp">
                                             <input id="start" type="text" placeholder="">
                                             <div class="input-border-gradient"></div>
@@ -232,8 +238,8 @@
     </main>
     <footer class="footer d-flex flex-col ai-c jc-c" id="contacts">
         <div class="container d-flex flex-col ai-c jc-c">
-            <div class="container-md">
-                <div class="footer-cnt-up d-flex jc-sb">
+            <div class="container-md flex-wrapp">
+                <div class="footer-cnt-up d-flex flex-wrapp jc-sb">
                     <div class="footer-logo d-flex flex-col g-1">
                         <div class="logo-cnt">
                             <a class="logo" href="#">

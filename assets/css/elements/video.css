@@ -8,4 +8,10 @@
 .video-wrapp {
     position: relative;
     z-index: 2;
+
+    max-width: 100%;
+}
+
+.video-wrapp video {
+    width: 100%;
 }

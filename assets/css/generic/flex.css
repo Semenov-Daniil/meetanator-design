@@ -17,6 +17,10 @@
     flex-direction: column;
 }
 
+.flex-wrapp {
+    flex-wrap: wrap;
+}
+
 .ai-c {
     align-items: center;
 }
