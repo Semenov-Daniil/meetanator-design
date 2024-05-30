@@ -6,9 +6,13 @@
 */
 
 .hero {
+    /* height: 900px; */
+
     & .slogan-wrapp, .mobile-wrapp {
         flex: 1;
+        height: 100%;
     }
+
 
     & .slogan-wrapp > .primary-button {
         font-size: 25px;
@@ -18,14 +22,23 @@
     }
 
     & .slogan {
+        text-align: center;
+
         font-family: var(--h-font-family-m);
         font-size: 100px;
         color: var(--color);
     }
 
     & .desc {
+        text-align: center;
+        line-height: 1.6em;
         font-family: var(--p-font-family-m);
         font-size: 20px;
         color: var(--thi-color);
     }
+}
+
+.hero > div,
+.hero > div > div {
+    height: 100%;
 }

@@ -21,43 +21,43 @@
                         <a class="nav-link" href="#">Главная</a>
                     </li>    
                     <li class="nav-menu-item">
-                        <a class="nav-link" href="#">О нас</a>
+                        <a class="nav-link" href="#about">О нас</a>
                     </li>    
                     <li class="nav-menu-item">
-                        <a class="nav-link" href="#">О системе</a>
+                        <a class="nav-link" href="#system">О системе</a>
                     </li>    
                     <li class="nav-menu-item">
-                        <a class="nav-link" href="#">Отзывы</a>
+                        <a class="nav-link" href="#reviews">Отзывы</a>
                     </li>    
                     <li class="nav-menu-item">
-                        <a class="nav-link" href="#">Контакты</a>
+                        <a class="nav-link" href="#contacts">Контакты</a>
                     </li>    
                 </ul>
                 <ul class="nav-menu d-flex ai-c g-3">
                     <li class="nav-menu-item">
-                        <a class="nav-pr-link" href="#">Вход</a>
+                        <a class="nav-pr-link" href="#auth">Вход</a>
                     </li>    
                     <li class="nav-menu-item">
-                        <a class="btn primary-button" href="#">Создать встречу</a>
+                        <a class="btn primary-button" href="#create">Создать встречу</a>
                     </li> 
                 </ul>
             </div>
         </nav>
     </header>
     <main>
-        <section class="hero d-flex flex-col ai-c jc-c">
-            <div class="container p-cnt bottom-radius bottom-gradient d-flex flex-col ai-c jc-c">
-                <div class="container-md d-flex ai-c jc-c">
-                    <div class="slogan-wrapp d-flex flex-col g-4">
+        <section class="hero d-flex flex-col ai-c">
+            <div class="container p-cnt bottom-radius bottom-gradient d-flex flex-col ai-c">
+                <div class="container-md d-flex">
+                    <div class="slogan-wrapp d-flex flex-col jc-c g-4 ai-c">
                         <h1 class="slogan">Все встречи </br> в одной руке.</h1>
                         <p class="desc">Создавайте встречи легко — приятный дизайн, удобный функционал, минимум времени.</p>
-                        <a class="btn primary-button" href="#">Создать встречу</a>
+                        <a class="btn primary-button" href="#create">Создать встречу</a>
                     </div>
-                    <div class="mobile-wrapp"></div>
+                    <!-- <div class="mobile-wrapp"></div> -->
                 </div>
             </div>
         </section>
-        <section class="about d-flex flex-col ai-c jc-c">
+        <section class="about d-flex flex-col ai-c jc-c" id="about">
             <div class="container p-cnt d-flex flex-col ai-c jc-c">
                 <div class="container-sm d-flex flex-col ai-c jc-c g-3">
                     <h1 class="cnt-title">О нас</h1>
@@ -86,7 +86,7 @@
                 </div>
             </div>
         </section>
-        <section class="system d-flex flex-col ai-c jc-c">
+        <section class="system d-flex flex-col ai-c jc-c" id="system">
             <div class="container p-cnt top-radius top-gradient d-flex flex-col ai-c jc-c">
                 <div class="container-sm d-flex flex-col ai-c jc-c g-3">
                     <h1 class="cnt-title">О системе</h1>
@@ -97,7 +97,7 @@
                 </div>
             </div>
         </section>
-        <section class="reviews d-flex flex-col ai-c jc-c">
+        <section class="reviews d-flex flex-col ai-c jc-c" id="reviews">
             <div class="blick"></div>
             <div class="container p-cnt d-flex flex-col ai-c jc-c">
                 <div class="container-sm d-flex flex-col ai-c jc-c g-3">
@@ -143,7 +143,7 @@
                 </div>
             </div>
         </section>
-        <section class="create d-flex flex-col ai-c jc-c">
+        <section class="create d-flex flex-col ai-c jc-c" id="create">
             <div class="container p-cnt top-radius top-gradient d-flex flex-col ai-c jc-c">
                 <div class="container-sm d-flex flex-col ai-c jc-c g-3">
                     <h1 class="cnt-title">Создание встречи</h1>
@@ -204,7 +204,7 @@
                 </div>
             </div>
         </section>
-        <section class="auth d-flex flex-col ai-c jc-c">
+        <section class="auth d-flex flex-col ai-c jc-c" id="auth">
             <div class="blick"></div>
             <div class="container p-cnt bottom-radius bottom-gradient d-flex flex-col ai-c jc-c">
                 <div class="container-sm d-flex flex-col ai-c jc-c g-3">
@@ -230,7 +230,7 @@
             </div>
         </section>
     </main>
-    <footer class="footer d-flex flex-col ai-c jc-c">
+    <footer class="footer d-flex flex-col ai-c jc-c" id="contacts">
         <div class="container d-flex flex-col ai-c jc-c">
             <div class="container-md">
                 <div class="footer-cnt-up d-flex jc-sb">
@@ -279,6 +279,18 @@
             </div>
         </div>
     </footer>
+
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.139.0/build/three.module.js",
+                "OrbitControls": "https://unpkg.com/three@0.139.0/examples/jsm/controls/OrbitControls.js",
+                "GLTFLoader": "https://unpkg.com/three@0.139.0/examples/jsm/loaders/GLTFLoader.js",
+                "RectAreaLightHelper": "https://unpkg.com/three@0.139.0/examples/jsm/helpers/RectAreaLightHelper.js",
+                "RectAreaLightUniformsLib": "https://unpkg.com/three@0.139.0/examples/jsm/lights/RectAreaLightUniformsLib.js"
+            }
+        }
+    </script>
 
     <script type="module" src="./assets/js/app.js"></script>
 </body>

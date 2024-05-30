@@ -8,7 +8,6 @@
 .container {
     position: relative;
     width: clamp(300px, 95%, 1820px);
-    min-height: fit-content;
 }
 
 .cnt-title {
@@ -20,11 +19,9 @@
 .container-md {
     position: relative;
     width: clamp(300px, 85%, 1820px);
-    min-height: fit-content;
 }
 
 .container-sm {
     position: relative;
     width: clamp(300px, 70%, 1820px);
-    min-height: fit-content;
 }
