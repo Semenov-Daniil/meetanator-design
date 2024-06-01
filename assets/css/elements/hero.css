@@ -6,7 +6,6 @@
 */
 
 .hero {
-    /* height: 900px; */
 
     & .slogan-wrapp, .mobile-wrapp {
         flex: 1;
@@ -36,6 +35,10 @@
         font-size: 20px;
         color: var(--thi-color);
     }
+}
+
+.hero > div {
+    min-height: 80vh;
 }
 
 .hero > div,

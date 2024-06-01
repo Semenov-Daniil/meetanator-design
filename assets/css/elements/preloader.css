@@ -1,0 +1,228 @@
+/* 
+    Author: Semenov Daniil
+    GitHub: https://github.com/Semenov-Daniil
+    Preloader style
+    Copyright
+*/
+
+body {
+    overflow: hidden;
+    animation: visible 1s linear forwards 6s;
+}
+
+header {
+    position: relative;
+    top: -100px;
+    animation: 
+        headerVisible 1s ease forwards 4.5s,
+        headerSticky 0s ease forwards 5.5s;
+}
+
+main {
+    top: 100vh;
+    animation: mainVisible 1.5s ease forwards 4.5s; 
+}
+
+@keyframes headerVisible {
+    from {
+        top: -100px;
+    }
+
+    to {
+        top: 0px;
+    }
+}
+
+@keyframes headerSticky {
+    from {
+        position: relative;
+    }
+
+    to {
+        position: sticky;
+    }
+}
+
+@keyframes mainVisible {
+    from {
+        top: 100vh;
+    }
+
+    to {
+        top: 0;
+    }
+}
+
+.preloader-wrapp {
+    /* display: none; */
+    position: absolute;
+    z-index: 1000;
+    width: 100%;
+    height: 100vh;
+
+    animation: 
+        preloaderHide 3s linear forwards 4s,
+        preloaderNone 0.1ms linear forwards 20s;
+}
+
+.preloader-wrapp .preloader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    gap: 1.5rem;
+}
+
+.preloader-wrapp .preloader .preloader-title-wrapp {
+    position: relative;
+    overflow: hidden;
+}
+
+.preloader-wrapp .preloader .preloader-title-wrapp .preloader-title {
+    position: relative;
+
+    opacity: 1;
+
+    left: -100%;
+
+    font-family: var(--h-font-family-m);
+    font-size: 5rem;
+
+    animation: titleRight 1s ease forwards 2.5s;
+}
+
+.preloader-wrapp .preloader .preloader-svg {
+    position: relative;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 8rem;
+
+    animation: iconLeft 0.5s ease forwards 2s;
+}
+
+.preloader-wrapp .preloader .preloader-svg svg {
+    position: relative;
+
+    width: 100%;
+
+    overflow: visible;
+}
+
+.preloader-wrapp .preloader .preloader-svg svg:first-child {
+    animation: 
+        iconShow 1.5s ease forwards,
+        iconTop 0.2s linear forwards 1.5s;
+}
+
+.preloader-wrapp .preloader .preloader-svg svg:last-child {
+    position: absolute;
+
+    top: 0px;
+    left: 0px;
+
+    opacity: 0;
+
+    stroke: var(--fou-color);
+    stroke-width: 2px;
+
+    animation: iconBottom 0.2s linear forwards 1.5s;
+}
+
+@keyframes iconShow {
+    from {
+        scale: 0.1;
+        opacity: 0;
+    }
+
+    to {
+        scale: 1;
+        opacity: 1;
+    }
+}
+
+@keyframes iconTop {
+    from {
+        top: 0px;
+        right: 0px;
+    }
+
+    to {
+        top: -2.5px;
+        right: -2.5px;
+    }
+}
+
+@keyframes iconBottom {
+    from {
+        opacity: 0;
+        top: 0px;
+        left: 0px;
+    }
+
+    to {
+        opacity: 1;
+        top: 2.5px;
+        left: -2.5px;
+    }
+}
+
+@keyframes iconLeft {
+    from {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    to {
+        left: 0;
+
+        transform: translateX(0%);
+    }
+}
+
+@keyframes titleRight {
+    from {
+        opacity: 0;
+        left: -100%;
+    }
+
+    to {
+        opacity: 1;
+        left: 0;
+    }
+}
+
+@keyframes preloaderHide {
+    from {
+        top: 0;
+    }
+
+    to {
+        top: -100%;
+    }
+}
+
+@keyframes preloaderNone {
+    from {
+        display: block;
+    }
+
+    to {
+        display: none;
+    }
+}
+
+@keyframes visible {
+    from {
+        overflow: hidden;
+    }
+
+    to {
+        overflow: visible;
+    }
+}

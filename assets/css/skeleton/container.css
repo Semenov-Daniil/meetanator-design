@@ -10,12 +10,6 @@
     width: clamp(300px, 95%, 1820px);
 }
 
-.cnt-title {
-    font-family: var(--h-font-family-m);
-    font-size: 4rem;
-    color: var(--color);
-}
-
 .container-md {
     position: relative;
     width: clamp(300px, 85%, 1820px);
@@ -24,4 +18,26 @@
 .container-sm {
     position: relative;
     width: clamp(300px, 70%, 1820px);
+}
+
+.cnt-title {
+    font-family: var(--h-font-family-m);
+    font-size: 4rem;
+    color: var(--color);
+}
+
+.cnt-gradient-b {
+    border-bottom-left-radius: 3.5rem;
+    border-bottom-right-radius: 3.5rem;
+    background-image: radial-gradient(140% 110% at 50% 10%, transparent 40%, var(--main-color) 70%, rgb(255, 255, 255) 100%);
+    background-size: 100%, 200%;
+
+    transition: all 0.5s;
+}
+
+.cnt-gradient-t {
+    border-top-left-radius: 3.5rem;
+    border-top-right-radius: 3.5rem;
+    background: radial-gradient(140% 110% at 50% 90%, transparent 40%, var(--main-color) 70%, rgb(255, 255, 255) 100%);
+    background-size: cover;
 }

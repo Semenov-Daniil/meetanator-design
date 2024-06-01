@@ -4,8 +4,29 @@
     Header style
     Copyright
 */
+
+header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header {
+    /* position: sticky; */
+    left: 0;
+    z-index: 100;
+
+    background: rgba(var(--main-bg-color-rgb), 0.6);
+    backdrop-filter: blur(20px);
+
+    transition: box-shadow 0.2s;
+}
+
 .header nav {
     padding-block: 2rem;
+
+    transition: padding-block 0.2s;
 }
 
 .header .mobile-menu {

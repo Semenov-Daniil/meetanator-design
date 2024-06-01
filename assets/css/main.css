@@ -40,3 +40,6 @@
 
 /* Media queries */
 @import url("./settings/media-queries.css");
+
+/* Preloader */
+@import url("./elements/preloader.css");

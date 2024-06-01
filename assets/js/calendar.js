@@ -1,7 +1,3 @@
-//check the console for date click event
-//Fixed day highlight
-//Added previous month and next month view
-
 function CalendarControl() {
     const calendar = new Date();
     const calendarControl = {
@@ -23,24 +19,24 @@ function CalendarControl() {
             "Декабрь"
         ],
         selectedDates: [],
-        daysInMonth: function (month, year) { //кол-во дней в месяце
+        daysInMonth: function (month, year) {
             return new Date(year, month, 0).getDate();
         },
-        firstDay: function () { //первый день месяца
+        firstDay: function () {
             return new Date(calendar.getFullYear(), calendar.getMonth(), 1);
         },
         lastDay: function () { //?
             console.log(new Date(calendar.getFullYear(), calendar.getMonth() + 1, 0));
             return new Date(calendar.getFullYear(), calendar.getMonth() + 1, 0);
         },
-        firstDayNumber: function () { //кол-во дней для отступа для 1 дня
+        firstDayNumber: function () {
             return calendarControl.firstDay().getDay();
         },
-        lastDayNumber: function () { //?
+        lastDayNumber: function () {
             console.log(calendarControl.lastDay().getDay() + 1);
             return calendarControl.lastDay().getDay() + 1;
         },
-        getPreviousMonthLastDate: function () { //следующий день ?
+        getPreviousMonthLastDate: function () {
             let lastDate = new Date(
                 calendar.getFullYear(),
                 calendar.getMonth(),
