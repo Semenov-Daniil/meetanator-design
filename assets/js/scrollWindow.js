@@ -1,12 +1,12 @@
-let header = document.querySelector('.header');
-let nav = document.querySelector('.header nav');
+let header = document.querySelector('header');
 
 window.addEventListener('scroll', function(event) {
+    console.log(scrollY);
     if (scrollY > 0) {
-        header.style.boxShadow = 'inset 0 0 0 1px hsla(0,0%,100%,.12), 0 0 0 1px rgba(0,0,0,.04)';
-        nav.style.paddingBlock = '0.8rem';
+        header.classList.remove('header-start');
+        header.classList.remove('header-a');
+        header.classList.add('header-skroll');
     } else {
-        header.style.boxShadow = '';
-        nav.style.paddingBlock = '';
+        header.classList.remove('header-skroll');
     }
 });

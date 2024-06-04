@@ -6,21 +6,24 @@
 */
 
 header {
-    width: 100%;
+    max-width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .header {
-    /* position: sticky; */
+    position: sticky;
+    top: 0px;
     left: 0;
     z-index: 100;
 
     background: rgba(var(--main-bg-color-rgb), 0.6);
     backdrop-filter: blur(20px);
 
-    transition: box-shadow 0.2s;
+    border-bottom: 1px solid transparent;
+
+    /* transition: all 0.2s; */
 }
 
 .header nav {
@@ -28,6 +31,14 @@ header {
 
     transition: padding-block 0.2s;
 }
+
+.header-skroll {
+    border-bottom-color: hsla(0,0%,100%, 0.12);
+}
+
+.header-skroll nav {
+    padding-block: 0.8rem;
+} 
 
 .header .mobile-menu {
     opacity: 0;

@@ -8,8 +8,11 @@
 @media only screen and (max-width: 1150px) {
     .header .nav-menu-wrapp {
         position: absolute;
+        display: none;
         opacity: 0;
-        z-index: -100;
+        z-index: -1000;
+        overflow: hidden;
+        clip-path: inset(100%);
     }
 
     .header .mobile-menu {
