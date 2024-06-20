@@ -1,4 +1,4 @@
-let preloader = true;
+let preloader = false;
 
 const body = document.querySelector('body');
 const header = document.querySelector('header');

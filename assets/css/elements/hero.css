@@ -7,41 +7,33 @@
 
 .hero {
 
-    & .slogan-wrapp, .mobile-wrapp {
-        flex: 1;
-        height: 100%;
-    }
-
-
-    & .slogan-wrapp > .primary-button {
-        font-size: 25px;
-
-        background: rgba(var(--main-bg-color-rgb), 0.8);
-        backdrop-filter: blur(10px);
-    }
-
-    & .slogan {
-        text-align: center;
-
-        font-family: var(--h-font-family-m);
-        font-size: 5rem;
-        color: var(--color);
-    }
-
-    & .desc {
-        text-align: center;
-        line-height: 1.6em;
-        font-family: var(--p-font-family-m);
-        font-size: 20px;
-        color: var(--thi-color);
-    }
 }
 
-.hero > div {
-    min-height: 80vh;
-}
-
-.hero > div,
-.hero > div > div {
+.hero .slogan-wrapp, .mobile-wrapp {
+    flex: 1;
     height: 100%;
+}
+
+.hero .slogan-wrapp > .primary-button {
+    font-size: 1.5rem;
+}
+
+.hero .slogan-wrapp .slogan {
+    text-align: center;
+
+    font-family: var(--h-font-family-m);
+    font-size: 5rem;
+    color: var(--color);
+}
+
+.hero .slogan-wrapp .desc {
+    text-align: center;
+    line-height: 1.6em;
+    font-family: var(--p-font-family-m);
+    font-size: 1rem;
+    color: var(--thi-color);
+}
+
+.hero > .container {
+    min-height: 80vh;
 }

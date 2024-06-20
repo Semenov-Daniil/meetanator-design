@@ -14,6 +14,8 @@ button {
 
     background-color: transparent;
 
+    backdrop-filter: blur(20px);
+
     cursor: pointer;
 }
 
@@ -28,89 +30,94 @@ button {
     transition: border-color 0.3s,
                 color 0.3s,
                 box-shadow 0.3s,
-                background-color 0.5s;
+                background-color 0.5s,
+                scale ease-in 0.2s;
 }
 
 .primary-button {
-    background: var(--main-bg-color);
+    position: relative;
+    z-index: 2;
 
-    &::before {
-        content: "";
-        position: absolute;
+    border: none;
 
-        inset: 0;
+    background: rgba(var(--main-bg-color-rgb), 0.5);
 
-        border: 2px solid transparent;
-        border-radius: inherit; 
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.12),
+                inset 0 0 10px 2px rgba(var(--sec-color-rgb), 0), 
+                0 0 0 1px rgba(0,0,0,.04),
+                0 0 10px 1px rgba(var(--color-rgb), 0.5),
+                0 0 10px 1px rgba(var(--main-color-rgb), 0),
+                0 0 20px 5px rgba(var(--sec-color-rgb), 0);
 
-        background: linear-gradient(to bottom, var(--main-bg-color) 30%, rgba(var(--main-bg-color-rgb), 0)) border-box,
-                    linear-gradient(90deg, var(--sec-color), var(--main-color) 50%, var(--sec-color)) border-box;
-        background-size: 100% 0%;
-        background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.primary-button::before {
+    content: "";
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+
+    display: block;
+    width: 0%;
+    aspect-ratio: 1;
+
+    opacity: 0;
+
+    border-radius: 100px;
+
+    background-image: radial-gradient(100% 100% at 50% 50%, transparent 10%, var(--sec-color) 50%);
+
+    box-shadow: 0 0 20px 2px rgba(var(--sec-color-rgb), 1);
+
+    transition: opacity 0.5s,
+                width 1s;
+}
+
+.primary-button:hover {
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.12), 
+                inset 0 0 10px 2px rgba(var(--sec-color-rgb), 0.2), 
+                0 0 0 1px rgba(0,0,0,.04),
+                0 0 10px 1px rgba(var(--color-rgb), 0),
+                0 0 10px 1px rgba(var(--main-color-rgb), 0.5),
+                0 0 20px 5px rgba(var(--sec-color-rgb), 1);
+}
+
+.primary-button:hover::before {
+    opacity: 1;
+    width: 200%;
+}
+
+.primary-button:active {
+    scale: 0.95;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.12), 
+                inset 0 0 10px 2px rgba(var(--sec-color-rgb), 0.2), 
+                0 0 0 1px rgba(0,0,0,.04),
+                0 0 10px 1px rgba(var(--color-rgb), 0),
+                0 0 20px 1px rgba(var(--main-color-rgb), 0.8),
+                0 0 30px 5px rgba(var(--sec-color-rgb), 1);
+}
+
+.primary-button:active::before {
+    width: 130%;
+}
+
+.second-button {
+    border-color: var(--color);
+}
+
+.second-button:hover {
+    background-color: var(--sec-color);
+    border-color: transparent;
+    
+    box-shadow: 0px 0px 15px 1px rgba(var(--sec-color-rgb), 0.5);
+}
 
 
-        -webkit-mask:
-            linear-gradient(#fff 0 0) padding-box, 
-            linear-gradient(#fff 0 0);
-        -webkit-mask-composite: xor;
-                mask-composite: exclude;
-
-        transition: all 0.8s;
-    }
-
-    &::after {
-        content: "";
-        position: absolute;
-
-        height: 50%;
-        width: 80%;
-
-        bottom: 10px;
-        left: 50%;
-
-        transform: translateX(-50%);
-
-        z-index: -1;
-        
-        background: linear-gradient(90deg, var(--sec-color), var(--main-color) 50%, var(--sec-color));
-        filter: blur(10px);
-
-        border-radius: 0%;
-
-        opacity: 0;
-
-        transition: all 0.5s;
-    }
-
-
-    &:hover {
-        border-color: transparent;
-    }
-
-    &:hover::before {
-        background-size: 100% 100%;
-    }
-
-    &:hover::after {
-        opacity: 1;
-
-        width: 100%;
-
-        bottom: -5px;
-
-        border-radius: 50%;
-    }
-
-    &:active {
-        color: rgba(var(--color-rgb), 0.7);
-    }
-
-    &:active::after {
-        width: 105%;
-        bottom: -8px;
-    }
-
-    &:active::before {
-        background-size: 100% 150%;
-    }
+.second-button:active {
+    scale: 0.95;
+    box-shadow: 0px 0px 25px 5px rgba(var(--sec-color-rgb), 0.5);
 }
