@@ -1,16 +1,19 @@
 let cntGradientBottom = [...document.getElementsByClassName('cnt-gradient-b')];
 
 cntGradientBottom.forEach(cnt => {
-    cnt.addEventListener('mouseover', (e) => {
-        createGrdCircle(cnt);
-    });
-
     cnt.addEventListener('mousemove',  (event) => {
-        moveGrdCircle(event, cnt);
-    });
+        const rect = cnt.getBoundingClientRect();
+        const cursoreX = event.clientX - rect.left;
+        const cursoreY = event.clientY - rect.top;
+        const cntWidth = cnt.offsetWidth;
+        const cntHeight = cnt.offsetHeight;
 
-    cnt.addEventListener('mouseout', (e) => {
-        removeGrdCircle(cnt);
+        const centerX = cntWidth/2;
+        const centerY = 0;
+
+        let angle = (Math.atan2(cursoreY-centerY, cursoreX-centerX) * 180 / Math.PI) - 90;
+
+        cnt.style.setProperty('--gradient-angle', angle + 'deg');
     });
 });
 

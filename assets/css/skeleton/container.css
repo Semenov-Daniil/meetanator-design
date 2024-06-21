@@ -5,19 +5,28 @@
     Copyright
 */
 
+/* @property --gradient-angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+} */
+
 .container {
     position: relative;
-    width: clamp(300px, 95%, 1820px);
+    width: 95%;
+    min-width: 300px;
 }
 
 .container-md {
     position: relative;
-    width: clamp(300px, 85%, 1820px);
+    width: 85%;
+    min-width: 300px;
 }
 
 .container-sm {
     position: relative;
-    width: clamp(300px, 70%, 1820px);
+    width: 70%;
+    min-width: 300px;
 }
 
 .cnt-title {
@@ -51,28 +60,44 @@
     background-size: cover;
 }
 
-.cnt-gradient-b > .gradient-circle {
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    transform: translate(-50%, -50%);
-    z-index: -10;
+.cnt-gradient-b::before {
+    content: "";
 
-    width: 20rem;
-    height: 20rem;
+    position: absolute;
+    left: -10px;
+    bottom: -10px;
+    right: -10px;
+    top: 35%;
+    z-index: -1;
+
+    display: block;
 
     opacity: 0;
 
-    border-radius: 100%;
+    border-radius: inherit;
 
-    background: radial-gradient(100% 100% at center, #8f8cec 0%, transparent 30%);
+    background: conic-gradient(from var(--gradient-angle), var(--main-bg-color), var(--main-bg-color), #6561e5, var(--main-bg-color),var(--main-bg-color));
 
-    transition: opacity 0.5s linear,
-                width 0.5s linear,
-                height 0.5s linear,
-                left 0.5s linear,
-                top 0.5s linear,
-                background 0.5s linear;
+    filter: blur(20px);
+
+    transition: opacity 0.5s;
+}
+
+.cnt-gradient-b:hover::before {
+    opacity: 1;
+}
+
+.cnt-gradient-b > .gradient-circle {
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -10;
+
+    width: 5rem;
+    height: 20rem;
+
+    /* background: radial-gradient(100% 100% at center, #8f8cec 0%, transparent 30%); */
 }
 
 .cnt-gradient-t {

@@ -9,6 +9,10 @@ form {
     width: 100%;
 }
 
+form > button[type="submit"] {
+    width: 100%;
+}
+
 .form-wrapp {
     width: 100%;
 
