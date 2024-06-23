@@ -18,14 +18,6 @@ header.header-a {
     animation: headerVisible 1s ease forwards;
 }
 
-main.main-start {
-    top: 100vh;
-}
-
-main.main-a {
-    animation: mainVisible 1.5s ease forwards; 
-}
-
 @keyframes headerVisible {
     from {
         top: -100px;
@@ -33,16 +25,6 @@ main.main-a {
 
     to {
         top: 0px;
-    }
-}
-
-@keyframes mainVisible {
-    from {
-        top: 100vh;
-    }
-
-    to {
-        top: 0;
     }
 }
 

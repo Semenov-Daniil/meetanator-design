@@ -101,7 +101,7 @@ function CalendarControl() {
               <button class="calendar-next" type="button"><svg width="11" height="19" viewBox="0 0 11 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.83095 2L9.16907 9.33811M1.83095 17L9.16907 9.66189" stroke="#B3B3B3" stroke-width="3" stroke-linecap="round"/></svg></button>
               </div>
               <div class="calendar-today-date">Сегодня: 
-                ${calendarControl.calWeekDays[calendarControl.localDate.getDay() - 1]}, 
+                ${calendarControl.calWeekDays.slice(calendarControl.localDate.getDay() - 1)[0]}, 
                 ${calendarControl.localDate.getDate()}, 
                 ${calendarControl.calMonthName[calendarControl.localDate.getMonth()]} 
                 ${calendarControl.localDate.getFullYear()}
