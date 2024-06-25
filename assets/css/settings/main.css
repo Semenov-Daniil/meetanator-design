@@ -13,6 +13,16 @@
     box-sizing: border-box;
 }
 
+::-webkit-scrollbar {
+    width: 5px;
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: radial-gradient(100% 100% at 50% 50%, var(--main-bg-color) 30%, var(--main-color) 50%, #ffffff 80%);
+}
+
 html {
     font-family: var(--p-font-family-r), sans-serif;
     font-size: var(--font-size);
@@ -22,7 +32,7 @@ html {
 
     scroll-behavior: smooth;
 
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }   
 
 body {

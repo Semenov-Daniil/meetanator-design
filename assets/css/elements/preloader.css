@@ -35,6 +35,28 @@
     100% { transform: translateY(0%); position: sticky; }
 }
 
+.preloader-wrapp.preloader-hide + header + main {
+    position: relative;
+    transform: translateY(100%);
+
+    animation: mainShow 1.5s forwards 5s;
+}
+
+@keyframes mainShow {
+    0% { transform: translateY(100%); }
+    100% { transform: translateY(0%); }
+}
+
+body {
+    overflow: hidden;
+    animation: bodyOverAuto 0s forwards 7s;
+}
+
+@keyframes bodyOverAuto {
+    0% { overflow: hidden; }
+    100% { overflow: auto; }
+}
+
 .preloader-wrapp .preloader {
     position: absolute;
     top: 50%;
