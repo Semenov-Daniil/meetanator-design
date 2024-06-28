@@ -9,63 +9,81 @@
     --preloader-show-time: 4s;
     --preloader-show: 1;
 
-    position: absolute;
+    position: fixed;
     top: 0%;
     z-index: 1000;
     
-    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
     height: 100vh;
-    
+
+    opacity: 1;
+
+    animation: preloaderNone 0s linear forwards 3s;
+}
+
+@keyframes preloaderNone {
+    from {
+        opacity: 1;
+        display: flex;
+        z-index: 1000;
+    }
+
+    to {
+        opacity: 0;
+        display: none;
+        z-index: -1000;
+    }
+}
+
+.preloader-wrapp::before {
+    content: "";
+    position: relative;
+    top: 0;
+    left: 0;
+
+    display: block;
+    width: 100%;
+    height: 100%;
+
     background-color: var(--main-bg-color);
+
+    animation: bgMoveTop 0.8s ease 2.5s forwards;
 }
 
-.preloader-wrapp.preloader-hide {
-    animation: preloaderHide 3s linear forwards 4s;
-}
+@keyframes bgMoveTop {
+    from {
+        top: 0;
+    }
 
-.preloader-wrapp.preloader-hide + header {
-    position: relative;
-    transform: translateY(-100%);
-
-    animation: headerShow 1s forwards 5s;
-}
-
-@keyframes headerShow {
-    0% { transform: translateY(-100%); }
-    100% { transform: translateY(0%); position: sticky; }
-}
-
-.preloader-wrapp.preloader-hide + header + main {
-    position: relative;
-    transform: translateY(100%);
-
-    animation: mainShow 1.5s forwards 5s;
-}
-
-@keyframes mainShow {
-    0% { transform: translateY(100%); }
-    100% { transform: translateY(0%); }
-}
-
-body {
-    overflow: hidden;
-    animation: bodyOverAuto 0s forwards 7s;
-}
-
-@keyframes bodyOverAuto {
-    0% { overflow: hidden; }
-    100% { overflow: auto; }
+    to {
+        top: -100%;
+    }
 }
 
 .preloader-wrapp .preloader {
     position: absolute;
-    top: 50%;
-    left: 50%;
 
-    transform: translate(-50%, -50%);
+    transform: scale(1);
 
     display: flex;
     gap: 1.5rem;
+
+    animation: preloaderHide 1s ease 2.5s forwards;
+}
+
+@keyframes preloaderHide {
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    to {
+        opacity: 0;
+        transform: scale(0.1);
+    }
 }
 
 .preloader-wrapp .preloader .preloader-title-wrapp {
@@ -74,28 +92,87 @@ body {
 }
 
 .preloader-wrapp .preloader .preloader-title-wrapp .preloader-title {
+    --preloader-title-scale: 5;
     position: relative;
+    left: 0%;
+
+    display: flex;
+    height: 100%;
 
     opacity: 1;
 
-    left: -100%;
 
     font-family: var(--h-font-family-m);
-    font-size: 5rem;
+    font-size: clamp(calc(5px * var(--preloader-title-scale)), calc(1.5vw * var(--preloader-title-scale)), calc(20px * var(--preloader-title-scale)));
 
-    animation: titleRight 1s ease forwards 2s;
+    overflow: hidden;
+}
+
+.preloader-wrapp .preloader .preloader-title-wrapp .preloader-title > span {
+    position: relative;
+    
+    opacity: 0;
+    transform: scale(0.5);
+}
+
+.preloader-wrapp .preloader .preloader-title-wrapp .preloader-title > span:nth-child(1) {
+    animation: letterRotate 1s ease forwards 1.5s;
+}
+.preloader-wrapp .preloader .preloader-title-wrapp .preloader-title > span:nth-child(2) {
+    animation: letterRotate 1s ease forwards 1.55s;
+}
+.preloader-wrapp .preloader .preloader-title-wrapp .preloader-title > span:nth-child(3) {
+    animation: letterRotate 1s ease forwards 1.6s;
+}
+.preloader-wrapp .preloader .preloader-title-wrapp .preloader-title > span:nth-child(4) {
+    animation: letterRotate 1s ease forwards 1.65s;
+}
+.preloader-wrapp .preloader .preloader-title-wrapp .preloader-title > span:nth-child(5) {
+    animation: letterRotate 1s ease forwards 1.7s;
+}
+.preloader-wrapp .preloader .preloader-title-wrapp .preloader-title > span:nth-child(6) {
+    animation: letterRotate 1s ease forwards 1.75s;
+}
+.preloader-wrapp .preloader .preloader-title-wrapp .preloader-title > span:nth-child(7) {
+    animation: letterRotate 1s ease forwards 1.8s;
+}
+.preloader-wrapp .preloader .preloader-title-wrapp .preloader-title > span:nth-child(8) {
+    animation: letterRotate 1s ease forwards 1.85s;
+}
+.preloader-wrapp .preloader .preloader-title-wrapp .preloader-title > span:nth-child(9) {
+    animation: letterRotate 1s ease forwards 1.9s;
+}
+.preloader-wrapp .preloader .preloader-title-wrapp .preloader-title > span:nth-child(10) {
+    animation: letterRotate 1s ease forwards 1.95s;
+}
+.preloader-wrapp .preloader .preloader-title-wrapp .preloader-title > span:nth-child(11) {
+    animation: letterRotate 1s ease forwards 2s;
+}
+
+@keyframes letterRotate {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 .preloader-wrapp .preloader .preloader-svg {
+    --preloader-svg-scale: 8;
+    --preloader-svg-move: 2%;
     position: relative;
 
     left: 50%;
 
     transform: translateX(-50%);
 
-    width: 8rem;
+    width: clamp(calc(5px * var(--preloader-svg-scale)), calc(1.5vw * var(--preloader-svg-scale)), calc(20px * var(--preloader-svg-scale)));
 
-    animation: iconLeft 0.5s ease forwards 2s;
+    animation: iconLeft 0.5s ease forwards 1.5s;
 }
 
 .preloader-wrapp .preloader .preloader-svg svg {
@@ -108,8 +185,8 @@ body {
 
 .preloader-wrapp .preloader .preloader-svg svg:first-child {
     animation: 
-        iconShow 1.5s ease forwards,
-        iconTop 0.2s linear forwards 1.5s;
+        iconShow 1s ease forwards,
+        iconTop 0.2s linear forwards 1s;
 }
 
 .preloader-wrapp .preloader .preloader-svg svg:last-child {
@@ -123,7 +200,7 @@ body {
     stroke: var(--fou-color);
     stroke-width: 2px;
 
-    animation: iconBottom 0.2s linear forwards 1.5s;
+    animation: iconBottom 0.2s linear forwards 1s;
 }
 
 @keyframes iconShow {
@@ -145,8 +222,8 @@ body {
     }
 
     to {
-        top: -2.5px;
-        right: -2.5px;
+        top: calc(-1 * var(--preloader-svg-move));
+        right: calc(-1 * var(--preloader-svg-move));
     }
 }
 
@@ -159,8 +236,8 @@ body {
 
     to {
         opacity: 1;
-        top: 2.5px;
-        left: -2.5px;
+        top: var(--preloader-svg-move);
+        left: calc(-1 * var(--preloader-svg-move));
     }
 }
 
@@ -174,31 +251,5 @@ body {
         left: 0;
 
         transform: translateX(0%);
-    }
-}
-
-@keyframes titleRight {
-    from {
-        opacity: 0;
-        left: -100%;
-    }
-
-    to {
-        opacity: 1;
-        left: 0;
-    }
-}
-
-@keyframes preloaderHide {
-    0% {
-        top: 0%;
-    }
-
-    10% {
-        top: 0.5%;
-    }
-
-    100% {
-        top: -100%;
     }
 }

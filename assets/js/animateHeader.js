@@ -1,6 +1,5 @@
 const body = document.body.getBoundingClientRect();
 const header = document.querySelector('header');
-const index_section = [...document.querySelector('.index-main').getElementsByTagName('section')];
 
 window.addEventListener('scroll', function(event) {
     if (this.scrollY > 0) {

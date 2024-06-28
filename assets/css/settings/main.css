@@ -13,16 +13,6 @@
     box-sizing: border-box;
 }
 
-::-webkit-scrollbar {
-    width: 5px;
-    background-color: transparent;
-}
-
-::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    background: radial-gradient(100% 100% at 50% 50%, var(--main-bg-color) 30%, var(--main-color) 50%, #ffffff 80%);
-}
-
 html {
     font-family: var(--p-font-family-r), sans-serif;
     font-size: var(--font-size);
@@ -31,33 +21,25 @@ html {
     background-color: var(--main-bg-color);
 
     scroll-behavior: smooth;
-
-    /* overflow-x: hidden; */
 }   
 
 body {
     position: relative;
 
+    display: flex;
+    flex-direction: column;
     min-height: 100vh;
 }
 
 main {
-    position: relative;
-    left: 0;
-    top: 0;
-    z-index: 1;
-
-    width: 100%;
-    height: 100%;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex: 1;
 }
 
 section {
     position: relative;
     width: 100%;
+
+    overflow-x: clip;
 }
 
 a {

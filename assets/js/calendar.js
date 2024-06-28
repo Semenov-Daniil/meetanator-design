@@ -90,9 +90,7 @@ function CalendarControl() {
             }
         },
         plotSelectors: function () {
-            document.querySelector(
-              ".calendar"
-            ).innerHTML += `<div class="calendar-inner"><div class="calendar-controls">
+            document.querySelector(".calendar").innerHTML += `<div class="calendar-inner"><div class="calendar-controls">
               <button class="calendar-prev" type="button"><svg width="11" height="19" viewBox="0 0 11 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.16905 2L1.83093 9.33811M9.16905 17L1.83093 9.66189" stroke="#B3B3B3" stroke-width="3" stroke-linecap="round"/></svg></button>
               <div class="calendar-year-month">
               <div class="calendar-month-label"></div>
@@ -233,7 +231,10 @@ function CalendarControl() {
             calendarControl.attachEvents();
         }
     };
-    calendarControl.init();
+
+    if (document.querySelector('.calendar')) {
+        calendarControl.init();
+    }
 };
       
 const calendarControl = new CalendarControl();

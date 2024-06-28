@@ -6,6 +6,7 @@
 */
 
 header {
+    width: 100%;
     max-width: 100%;
     display: flex;
     align-items: center;
@@ -13,9 +14,8 @@ header {
 }
 
 .header {
-    position: sticky;
-    top: 0px;
-    left: 0;
+    position: relative;
+    top: 0;
     z-index: 100;
 
     background: rgba(var(--main-bg-color-rgb), 0.6);
@@ -23,7 +23,30 @@ header {
 
     border-bottom: 1px solid transparent;
 
-    /* transition: all 0.2s; */
+    transition: all 0.2s;
+
+    animation: headerShow 2s ease 2s forwards,
+                headerPosition 0s linear 4s forwards;
+}
+
+@keyframes headerShow {
+    from {
+        top: -100%;
+    }
+
+    to {
+        top: 0;
+    }
+}
+
+@keyframes headerPosition {
+    from {
+        position: relative;
+    }
+
+    to {
+        position: sticky;
+    }
 }
 
 .header nav {

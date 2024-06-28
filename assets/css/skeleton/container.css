@@ -14,19 +14,19 @@
 .container {
     position: relative;
     width: 95%;
-    min-width: 300px;
+    min-width: 250px;
 }
 
 .container-md {
     position: relative;
     width: 85%;
-    min-width: 300px;
+    min-width: 250px;
 }
 
 .container-sm {
     position: relative;
     width: 70%;
-    min-width: 300px;
+    min-width: 250px;
 }
 
 .cnt-title {

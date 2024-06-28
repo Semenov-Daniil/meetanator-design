@@ -1,0 +1,1 @@
+window.scrollY = 0;
