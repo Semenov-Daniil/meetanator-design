@@ -30,9 +30,17 @@
 }
 
 .cnt-title {
+    width: 100%;
+
     font-family: var(--h-font-family-m);
     font-size: 4rem;
     color: var(--color);
+
+    /* text-transform: uppercase; */
+}
+
+.title-left {
+    text-align: left;
 }
 
 .cnt-gradient-b {

@@ -9,6 +9,7 @@
 :root {
     --h-font-family-r: "Ubuntu-Regular";
     --h-font-family-m: "Ubuntu-Medium";
+    --h-font-family-b: "Ubuntu-Bold";
 
     --p-font-family-r: "Rubik-Regular";
     --p-font-family-m: "Rubik-Medium";
@@ -35,4 +36,7 @@
     --sec-light-color: #6e69ff;
 
     --glass-color: rgba(255, 255, 255, 0.1);
+
+
+    --color-test: rgb(0, 255, 1);
 }

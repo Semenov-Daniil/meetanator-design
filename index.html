@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meetanator</title>
-    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/main.css">    
 </head>
 <body>
     <div class="preloader-wrapp">
@@ -78,48 +78,107 @@
         </nav>
     </header>
     <main class="main index-main">
-        <section class="hero d-flex flex-col ai-c section-vidden">
-            <div class="container p-cnt cnt-gradient-b d-flex flex-col ai-c jc-c" style="--gradient-angle: 0deg">
-                <div class="container-md d-flex">
-                    <div class="slogan-wrapp d-flex flex-col jc-c g-4 ai-c">
-                        <h1 class="slogan">Все встречи </br> в одной руке.</h1>
-                        <p class="desc">Создавайте встречи легко — приятный дизайн, удобный функционал, минимум времени.</p>
-                        <a class="btn primary-button" href="#create">Создать встречу</a>
+        <section class="hero d-flex flex-col ai-c">
+            <div class="container d-flex">
+                <div class="p-cnt cnt-gradient-b d-flex jc-c" style="--gradient-angle: 0deg">
+                    <div class="container-md d-flex">
+                        <div class="slogan-wrapp d-flex flex-col jc-c g-4 ai-c">
+                            <div>
+                                <div class="overflow-hiddent-wrapp">
+                                    <h1 class="slogan">
+                                        Все встречи
+                                    </h1>
+                                </div>
+                                <div class="overflow-hiddent-wrapp">
+                                    <h1 class="slogan">
+                                        в одной руке.
+                                    </h1>
+                                </div>
+                            </div>
+                            <div class="overflow-hiddent-wrapp">
+                                <p class="desc">Создавайте встречи легко — приятный дизайн, удобный функционал, минимум времени.</p>
+                            </div>
+                            <a class="btn primary-button" href="#create">Создать встречу</a>
+                        </div>
                     </div>
+                    <div class="grd-cnt-blick"></div>
                 </div>
-                <div class="grd-cnt-blick"></div>
             </div>
         </section>
-        <section class="about d-flex flex-col ai-c jc-c section-vidden" id="about">
+        <section class="about d-flex flex-col ai-c jc-c " id="about">
             <div class="container p-cnt d-flex flex-col ai-c jc-c">
-                <div class="container-sm d-flex flex-col ai-c jc-c g-3">
-                    <h1 class="cnt-title">О нас</h1>
-                    <div class="about-list d-flex g-3 flex-wrapp">
-                        <div class="d-flex flex-col g-3">
-                            <div class="about-item">
-                                <h2 class="about-item-title">&gt; 4000 пользователей</h2>
-                                <p class="about-item-desc">На сегодняшний день наш сервис используется более чем 4000 IT-специалистов. Мы постоянно работаем над улучшением нашего сервиса, чтобы сделать его еще более удобным и функциональным для наших пользователей.</p>
-                            </div>
-                            <div class="about-item">
-                                <h2 class="about-item-title">&gt; 90% положительных отзывов</h2>
-                                <p class="about-item-desc">Мы очень дорожим мнением наших пользователей и всегда стремимся улучшить наш сервис на основе их отзывов. Более 90% наших пользователей оставили положительные отзывы о нашем сервисе, что является для нас большой честью и поощрением.</p>
+                <div class="container-md d-flex flex-col ai-c jc-c g-5">
+                    <div class="about-wrapp d-flex flex-wrapp">
+                        <div class="about-info-wrapp d-flex flex-col g-3">
+                            <h1 class="about-info-title">Что такое meetanator?</h1>
+                            <p class="about-info">
+                                <span class="about-info-excretion">Meetanator Meetanator - это сервис планирования встреч.</span> <span class="about-info-text">Основная идея сервиса - простое и удобное решение, которое помогло бы эффективнее управлять рабочим графиком и проводить встречи без лишних усилий. Сервис удобен как для лидера встречи, так и для её участников.</span>
+                            </p>
+                            <div class="about-statistic d-flex g-5 flex-wrapp jc-sb">
+                                <div class="about-statistic-wrapp d-flex flex-col g-3">
+                                    <div class="about-statistic-item">
+                                        <div class="about-statistic-icon-wrapp">
+                                            <svg class="about-statistic-icon" viewBox="0 0 16 20"xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M8.00013 10.5266C9.05496 10.5266 10.0861 10.2179 10.9632 9.63957C11.8402 9.06126 12.5238 8.23929 12.9275 7.2776C13.3312 6.3159 13.4368 5.25768 13.231 4.23676C13.0252 3.21583 12.5172 2.27804 11.7714 1.542C11.0255 0.805949 10.0752 0.304693 9.04061 0.101618C8.00605 -0.101457 6.93369 0.00276867 5.95915 0.401115C4.98461 0.799461 4.15166 1.47404 3.56563 2.33954C2.97959 3.20504 2.6668 4.22259 2.6668 5.26352C2.66821 6.65894 3.23057 7.9968 4.23045 8.98351C5.23034 9.97021 6.58608 10.5252 8.00013 10.5266ZM8.00013 1.75483C8.70335 1.75483 9.39078 1.96062 9.97549 2.34615C10.5602 2.73169 11.0159 3.27968 11.285 3.9208C11.5541 4.56193 11.6246 5.26741 11.4874 5.94803C11.3502 6.62865 11.0115 7.25384 10.5143 7.74454C10.017 8.23524 9.3835 8.56941 8.69378 8.70479C8.00407 8.84017 7.28917 8.77069 6.63948 8.50513C5.98979 8.23956 5.43448 7.78984 5.04379 7.21284C4.6531 6.63584 4.44457 5.95747 4.44457 5.26352C4.44457 4.33296 4.81918 3.44051 5.48597 2.7825C6.15277 2.1245 7.05714 1.75483 8.00013 1.75483Z"/>
+                                                <path d="M8 11.228C5.87899 11.2303 3.84553 12.0628 2.34574 13.5429C0.845963 15.0229 0.00235276 17.0295 0 19.1226C0 19.3552 0.0936505 19.5783 0.260349 19.7428C0.427048 19.9073 0.653141 19.9997 0.888889 19.9997C1.12464 19.9997 1.35073 19.9073 1.51743 19.7428C1.68413 19.5783 1.77778 19.3552 1.77778 19.1226C1.77778 17.4941 2.43333 15.9323 3.60022 14.7808C4.76712 13.6293 6.34976 12.9824 8 12.9824C9.65024 12.9824 11.2329 13.6293 12.3998 14.7808C13.5667 15.9323 14.2222 17.4941 14.2222 19.1226C14.2222 19.3552 14.3159 19.5783 14.4826 19.7428C14.6493 19.9073 14.8754 19.9997 15.1111 19.9997C15.3469 19.9997 15.573 19.9073 15.7397 19.7428C15.9064 19.5783 16 19.3552 16 19.1226C15.9976 17.0295 15.154 15.0229 13.6543 13.5429C12.1545 12.0628 10.121 11.2303 8 11.228Z"/>
+                                            </svg>
+                                        </div>
+                                        <div class="about-statistic-info">
+                                            <h2 class="about-statistic-title">1 823</h2>
+                                            <p class="about-statistic-desc">Пользователей</p>
+                                        </div>
+                                    </div>
+                                    <div class="about-statistic-item">
+                                        <div class="about-statistic-icon-wrapp">
+                                            <svg class="about-statistic-icon" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M8.00013 10.5266C9.05496 10.5266 10.0861 10.2179 10.9632 9.63957C11.8402 9.06126 12.5238 8.23929 12.9275 7.2776C13.3312 6.3159 13.4368 5.25768 13.231 4.23676C13.0252 3.21583 12.5172 2.27804 11.7714 1.542C11.0255 0.805949 10.0752 0.304693 9.04061 0.101618C8.00605 -0.101457 6.93369 0.00276867 5.95915 0.401115C4.98461 0.799461 4.15166 1.47404 3.56563 2.33954C2.97959 3.20504 2.6668 4.22259 2.6668 5.26352C2.66821 6.65894 3.23057 7.9968 4.23045 8.98351C5.23034 9.97021 6.58608 10.5252 8.00013 10.5266ZM8.00013 1.75483C8.70335 1.75483 9.39078 1.96062 9.97549 2.34615C10.5602 2.73169 11.0159 3.27968 11.285 3.9208C11.5541 4.56193 11.6246 5.26741 11.4874 5.94803C11.3502 6.62865 11.0115 7.25384 10.5143 7.74454C10.017 8.23524 9.3835 8.56941 8.69378 8.70479C8.00407 8.84017 7.28917 8.77069 6.63948 8.50513C5.98979 8.23956 5.43448 7.78984 5.04379 7.21284C4.6531 6.63584 4.44457 5.95747 4.44457 5.26352C4.44457 4.33296 4.81918 3.44051 5.48597 2.7825C6.15277 2.1245 7.05714 1.75483 8.00013 1.75483Z"/>
+                                                <path d="M8 11.228C5.87899 11.2303 3.84553 12.0628 2.34574 13.5429C0.845963 15.0229 0.00235276 17.0295 0 19.1226C0 19.3552 0.0936505 19.5783 0.260349 19.7428C0.427048 19.9073 0.653141 19.9997 0.888889 19.9997C1.12464 19.9997 1.35073 19.9073 1.51743 19.7428C1.68413 19.5783 1.77778 19.3552 1.77778 19.1226C1.77778 17.4941 2.43333 15.9323 3.60022 14.7808C4.76712 13.6293 6.34976 12.9824 8 12.9824C9.65024 12.9824 11.2329 13.6293 12.3998 14.7808C13.5667 15.9323 14.2222 17.4941 14.2222 19.1226C14.2222 19.3552 14.3159 19.5783 14.4826 19.7428C14.6493 19.9073 14.8754 19.9997 15.1111 19.9997C15.3469 19.9997 15.573 19.9073 15.7397 19.7428C15.9064 19.5783 16 19.3552 16 19.1226C15.9976 17.0295 15.154 15.0229 13.6543 13.5429C12.1545 12.0628 10.121 11.2303 8 11.228Z"/>
+                                            </svg>
+                                        </div>
+                                        <div class="about-statistic-info">
+                                            <h2 class="about-statistic-title">5 423</h2>
+                                            <p class="about-statistic-desc">Запланированных встреч</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="about-statistic-wrapp d-flex flex-col g-3">
+                                    <div class="about-statistic-item">
+                                        <div class="about-statistic-icon-wrapp">
+                                            <svg class="about-statistic-icon" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M8.00013 10.5266C9.05496 10.5266 10.0861 10.2179 10.9632 9.63957C11.8402 9.06126 12.5238 8.23929 12.9275 7.2776C13.3312 6.3159 13.4368 5.25768 13.231 4.23676C13.0252 3.21583 12.5172 2.27804 11.7714 1.542C11.0255 0.805949 10.0752 0.304693 9.04061 0.101618C8.00605 -0.101457 6.93369 0.00276867 5.95915 0.401115C4.98461 0.799461 4.15166 1.47404 3.56563 2.33954C2.97959 3.20504 2.6668 4.22259 2.6668 5.26352C2.66821 6.65894 3.23057 7.9968 4.23045 8.98351C5.23034 9.97021 6.58608 10.5252 8.00013 10.5266ZM8.00013 1.75483C8.70335 1.75483 9.39078 1.96062 9.97549 2.34615C10.5602 2.73169 11.0159 3.27968 11.285 3.9208C11.5541 4.56193 11.6246 5.26741 11.4874 5.94803C11.3502 6.62865 11.0115 7.25384 10.5143 7.74454C10.017 8.23524 9.3835 8.56941 8.69378 8.70479C8.00407 8.84017 7.28917 8.77069 6.63948 8.50513C5.98979 8.23956 5.43448 7.78984 5.04379 7.21284C4.6531 6.63584 4.44457 5.95747 4.44457 5.26352C4.44457 4.33296 4.81918 3.44051 5.48597 2.7825C6.15277 2.1245 7.05714 1.75483 8.00013 1.75483Z"/>
+                                                <path d="M8 11.228C5.87899 11.2303 3.84553 12.0628 2.34574 13.5429C0.845963 15.0229 0.00235276 17.0295 0 19.1226C0 19.3552 0.0936505 19.5783 0.260349 19.7428C0.427048 19.9073 0.653141 19.9997 0.888889 19.9997C1.12464 19.9997 1.35073 19.9073 1.51743 19.7428C1.68413 19.5783 1.77778 19.3552 1.77778 19.1226C1.77778 17.4941 2.43333 15.9323 3.60022 14.7808C4.76712 13.6293 6.34976 12.9824 8 12.9824C9.65024 12.9824 11.2329 13.6293 12.3998 14.7808C13.5667 15.9323 14.2222 17.4941 14.2222 19.1226C14.2222 19.3552 14.3159 19.5783 14.4826 19.7428C14.6493 19.9073 14.8754 19.9997 15.1111 19.9997C15.3469 19.9997 15.573 19.9073 15.7397 19.7428C15.9064 19.5783 16 19.3552 16 19.1226C15.9976 17.0295 15.154 15.0229 13.6543 13.5429C12.1545 12.0628 10.121 11.2303 8 11.228Z"/>
+                                            </svg>
+                                        </div>
+                                        <div class="about-statistic-info">
+                                            <h2 class="about-statistic-title">4 845</h2>
+                                            <p class="about-statistic-desc">Завершенных встреч</p>
+                                        </div>
+                                    </div>
+                                    <div class="about-statistic-item">
+                                        <div class="about-statistic-icon-wrapp">
+                                            <svg class="about-statistic-icon" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M8.00013 10.5266C9.05496 10.5266 10.0861 10.2179 10.9632 9.63957C11.8402 9.06126 12.5238 8.23929 12.9275 7.2776C13.3312 6.3159 13.4368 5.25768 13.231 4.23676C13.0252 3.21583 12.5172 2.27804 11.7714 1.542C11.0255 0.805949 10.0752 0.304693 9.04061 0.101618C8.00605 -0.101457 6.93369 0.00276867 5.95915 0.401115C4.98461 0.799461 4.15166 1.47404 3.56563 2.33954C2.97959 3.20504 2.6668 4.22259 2.6668 5.26352C2.66821 6.65894 3.23057 7.9968 4.23045 8.98351C5.23034 9.97021 6.58608 10.5252 8.00013 10.5266ZM8.00013 1.75483C8.70335 1.75483 9.39078 1.96062 9.97549 2.34615C10.5602 2.73169 11.0159 3.27968 11.285 3.9208C11.5541 4.56193 11.6246 5.26741 11.4874 5.94803C11.3502 6.62865 11.0115 7.25384 10.5143 7.74454C10.017 8.23524 9.3835 8.56941 8.69378 8.70479C8.00407 8.84017 7.28917 8.77069 6.63948 8.50513C5.98979 8.23956 5.43448 7.78984 5.04379 7.21284C4.6531 6.63584 4.44457 5.95747 4.44457 5.26352C4.44457 4.33296 4.81918 3.44051 5.48597 2.7825C6.15277 2.1245 7.05714 1.75483 8.00013 1.75483Z"/>
+                                                <path d="M8 11.228C5.87899 11.2303 3.84553 12.0628 2.34574 13.5429C0.845963 15.0229 0.00235276 17.0295 0 19.1226C0 19.3552 0.0936505 19.5783 0.260349 19.7428C0.427048 19.9073 0.653141 19.9997 0.888889 19.9997C1.12464 19.9997 1.35073 19.9073 1.51743 19.7428C1.68413 19.5783 1.77778 19.3552 1.77778 19.1226C1.77778 17.4941 2.43333 15.9323 3.60022 14.7808C4.76712 13.6293 6.34976 12.9824 8 12.9824C9.65024 12.9824 11.2329 13.6293 12.3998 14.7808C13.5667 15.9323 14.2222 17.4941 14.2222 19.1226C14.2222 19.3552 14.3159 19.5783 14.4826 19.7428C14.6493 19.9073 14.8754 19.9997 15.1111 19.9997C15.3469 19.9997 15.573 19.9073 15.7397 19.7428C15.9064 19.5783 16 19.3552 16 19.1226C15.9976 17.0295 15.154 15.0229 13.6543 13.5429C12.1545 12.0628 10.121 11.2303 8 11.228Z"/>
+                                            </svg>
+                                        </div>
+                                        <div class="about-statistic-info">
+                                            <h2 class="about-statistic-title">100</h2>
+                                            <p class="about-statistic-desc">Положительных оценок</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="d-flex flex-col g-3">
-                            <div class="about-item">
-                                <h2 class="about-item-title">&gt; 100 млн. руб привлеченных инвестиции</h2>
-                                <p class="about-item-desc">Мы очень благодарны нашим инвесторам, которые помогли нам развивать наш сервис и сделать его еще более функциональным. На сегодняшний день мы привлекли более 100 млн. руб инвестиций, что позволяет нам продолжать работать над улучшением нашего сервиса и предоставлять нашим пользователям еще более качественный продукт.</p>
-                            </div>
-                            <div class="about-item">
-                                <h2 class="about-item-title">&gt; 10 лет на рынке</h2>
-                                <p class="about-item-desc">Наш сервис успешно работает на рынке уже более 10 лет. Мы гордимся тем, что наш сервис стал настолько популярным и востребованным среди IT-специалистов. Мы всегда стремимся улучшить наш сервис и предоставлять нашим пользователям еще более качественный продукт.</p>
+                        <div class="about-logo-wrapp d-flex ai-c jc-c">
+                            <div class="about-logo-cnt">
+                                <div class="about-logo"></div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="system d-flex flex-col ai-c jc-c section-vidden" id="system">
+        <section class="system d-flex flex-col ai-c jc-c " id="system">
             <div class="container p-cnt cnt-gradient-t d-flex flex-col ai-c jc-c">
                 <div class="container-sm d-flex flex-col ai-c jc-c g-3">
                     <h1 class="cnt-title">О системе</h1>
@@ -131,7 +190,7 @@
                 <div class="grd-cnt-blick"></div>
             </div>
         </section>
-        <section class="reviews d-flex flex-col ai-c jc-c section-vidden" id="reviews">
+        <section class="reviews d-flex flex-col ai-c jc-c " id="reviews">
             <div class="blick"></div>
             <div class="container p-cnt d-flex flex-col ai-c jc-c">
                 <div class="container-sm d-flex flex-col ai-c jc-c g-3">
@@ -177,7 +236,7 @@
                 </div>
             </div>
         </section>
-        <section class="create d-flex flex-col ai-c jc-c section-vidden" id="create">
+        <section class="create d-flex flex-col ai-c jc-c " id="create">
             <div class="container p-cnt cnt-gradient-t d-flex flex-col ai-c jc-c">
                 <div class="container-sm d-flex flex-col ai-c jc-c g-3">
                     <h1 class="cnt-title">Создание встречи</h1>
@@ -239,7 +298,7 @@
                 <div class="grd-cnt-blick"></div>
             </div>
         </section>
-        <section class="auth d-flex flex-col ai-c jc-c section-vidden" id="auth">
+        <section class="auth d-flex flex-col ai-c jc-c " id="auth">
             <div class="blick"></div>
             <div class="container p-cnt cnt-gradient-b d-flex flex-col ai-c jc-c">
                 <div class="container-sm d-flex flex-col ai-c jc-c g-3">
@@ -316,18 +375,7 @@
         </div>
     </footer>
 
-    <script type="importmap">
-        {
-            "imports": {
-                "three": "https://unpkg.com/three@0.139.0/build/three.module.js",
-                "OrbitControls": "https://unpkg.com/three@0.139.0/examples/jsm/controls/OrbitControls.js",
-                "GLTFLoader": "https://unpkg.com/three@0.139.0/examples/jsm/loaders/GLTFLoader.js",
-                "RectAreaLightHelper": "https://unpkg.com/three@0.139.0/examples/jsm/helpers/RectAreaLightHelper.js",
-                "RectAreaLightUniformsLib": "https://unpkg.com/three@0.139.0/examples/jsm/lights/RectAreaLightUniformsLib.js"
-            }
-        }
-    </script>
-
     <script type="module" src="./assets/js/app.js"></script>
+
 </body>
 </html>

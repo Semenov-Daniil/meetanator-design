@@ -6,9 +6,6 @@
 */
 
 .preloader-wrapp {
-    --preloader-show-time: 4s;
-    --preloader-show: 1;
-
     position: fixed;
     top: 0%;
     z-index: 1000;
@@ -116,37 +113,37 @@
 }
 
 .preloader-wrapp .preloader .preloader-title-wrapp .preloader-title > span:nth-child(1) {
-    animation: letterRotate 1s ease forwards 1.5s;
-}
-.preloader-wrapp .preloader .preloader-title-wrapp .preloader-title > span:nth-child(2) {
-    animation: letterRotate 1s ease forwards 1.55s;
-}
-.preloader-wrapp .preloader .preloader-title-wrapp .preloader-title > span:nth-child(3) {
     animation: letterRotate 1s ease forwards 1.6s;
 }
-.preloader-wrapp .preloader .preloader-title-wrapp .preloader-title > span:nth-child(4) {
+.preloader-wrapp .preloader .preloader-title-wrapp .preloader-title > span:nth-child(2) {
     animation: letterRotate 1s ease forwards 1.65s;
 }
-.preloader-wrapp .preloader .preloader-title-wrapp .preloader-title > span:nth-child(5) {
+.preloader-wrapp .preloader .preloader-title-wrapp .preloader-title > span:nth-child(3) {
     animation: letterRotate 1s ease forwards 1.7s;
 }
-.preloader-wrapp .preloader .preloader-title-wrapp .preloader-title > span:nth-child(6) {
+.preloader-wrapp .preloader .preloader-title-wrapp .preloader-title > span:nth-child(4) {
     animation: letterRotate 1s ease forwards 1.75s;
 }
-.preloader-wrapp .preloader .preloader-title-wrapp .preloader-title > span:nth-child(7) {
+.preloader-wrapp .preloader .preloader-title-wrapp .preloader-title > span:nth-child(5) {
     animation: letterRotate 1s ease forwards 1.8s;
 }
-.preloader-wrapp .preloader .preloader-title-wrapp .preloader-title > span:nth-child(8) {
+.preloader-wrapp .preloader .preloader-title-wrapp .preloader-title > span:nth-child(6) {
     animation: letterRotate 1s ease forwards 1.85s;
 }
-.preloader-wrapp .preloader .preloader-title-wrapp .preloader-title > span:nth-child(9) {
+.preloader-wrapp .preloader .preloader-title-wrapp .preloader-title > span:nth-child(7) {
     animation: letterRotate 1s ease forwards 1.9s;
 }
-.preloader-wrapp .preloader .preloader-title-wrapp .preloader-title > span:nth-child(10) {
+.preloader-wrapp .preloader .preloader-title-wrapp .preloader-title > span:nth-child(8) {
     animation: letterRotate 1s ease forwards 1.95s;
 }
-.preloader-wrapp .preloader .preloader-title-wrapp .preloader-title > span:nth-child(11) {
+.preloader-wrapp .preloader .preloader-title-wrapp .preloader-title > span:nth-child(9) {
     animation: letterRotate 1s ease forwards 2s;
+}
+.preloader-wrapp .preloader .preloader-title-wrapp .preloader-title > span:nth-child(10) {
+    animation: letterRotate 1s ease forwards 2.05s;
+}
+.preloader-wrapp .preloader .preloader-title-wrapp .preloader-title > span:nth-child(11) {
+    animation: letterRotate 1s ease forwards 2.1s;
 }
 
 @keyframes letterRotate {

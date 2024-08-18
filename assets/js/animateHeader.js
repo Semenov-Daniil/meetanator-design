@@ -1,10 +1,17 @@
 const body = document.body.getBoundingClientRect();
+const preloader = document.querySelector('.preloader-wrapp');
 const header = document.querySelector('header');
+
+if (preloader) {
+    header.classList.add('preloader-show');
+}
+
+if (window.scrollY > 0) {
+    header.classList.add('header-skroll');
+}
 
 window.addEventListener('scroll', function(event) {
     if (this.scrollY > 0) {
-        header.classList.remove('header-start');
-        header.classList.remove('header-a');
         header.classList.add('header-skroll');
     } else {
         header.classList.remove('header-skroll');

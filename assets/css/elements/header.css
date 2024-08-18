@@ -14,9 +14,11 @@ header {
 }
 
 .header {
-    position: relative;
+    position: fixed;
     top: 0;
     z-index: 100;
+
+    translate: 0% -100%;
 
     background: rgba(var(--main-bg-color-rgb), 0.6);
     backdrop-filter: blur(20px);
@@ -25,27 +27,20 @@ header {
 
     transition: all 0.2s;
 
-    animation: headerShow 2s ease 2s forwards,
-                headerPosition 0s linear 4s forwards;
+    animation: headerShow 1s ease forwards;
+}
+
+.header.preloader-show {
+    animation: headerShow 1s ease 2.8s forwards;
 }
 
 @keyframes headerShow {
     from {
-        top: -100%;
+        translate: 0% -100%;
     }
 
     to {
-        top: 0;
-    }
-}
-
-@keyframes headerPosition {
-    from {
-        position: relative;
-    }
-
-    to {
-        position: sticky;
+        translate: 0% 0%;
     }
 }
 
@@ -55,12 +50,38 @@ header {
     transition: padding-block 0.2s;
 }
 
-.header-skroll {
-    border-bottom-color: hsla(0,0%,100%, 0.12);
+.header::after {
+    content: "";
+
+    position: absolute;
+    left: 50%;
+    right: 0;
+    bottom: 0;
+
+    translate: -50% 100%;
+
+    display: block;
+    width: 0%;
+    height: 10px;
+
+    border-top: 1px solid;
+    border-image-source: linear-gradient(90deg, transparent, rgba(var(--sec-color-rgb), 0.5) 50%, transparent 100%);
+    border-image-slice: 1;
+
+    background: radial-gradient(50% 100% at 50% 0%, rgba(var(--sec-color-rgb), 0.25) 0, transparent 70%);
+
+    opacity: 0;
+
+    transition: all 0.5s;
+}
+
+.header-skroll::after {
+    width: 100%;
+    opacity: 1;
 }
 
 .header-skroll nav {
-    padding-block: 0.8rem;
+    padding-block: 1rem;
 } 
 
 .header .mobile-menu {

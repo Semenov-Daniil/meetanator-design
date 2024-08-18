@@ -1,0 +1,17 @@
+/* 
+    Author: Semenov Daniil
+    GitHub: https://github.com/Semenov-Daniil
+    Scrollbar style
+    Copyright
+*/
+
+/* html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+    width: 0;
+    display: none;
+}
+
+html, 
+body {
+    scrollbar-width: none;
+} */

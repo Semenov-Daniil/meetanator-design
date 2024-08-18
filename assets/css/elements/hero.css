@@ -6,7 +6,12 @@
 */
 
 .hero {
+    --animation-delay: 0s;
+    margin-top: 6rem;
+}
 
+.hero .container > div {
+    flex: 1;
 }
 
 .hero .slogan-wrapp, .mobile-wrapp {
@@ -36,4 +41,71 @@
 
 .hero > .container {
     min-height: 80vh;
+}
+
+.hero.preloader-show {
+    --animation-delay: 2.8s;
+}
+
+.hero.section-show > .container {
+    translate: 0% 100%;
+    opacity: 0;
+
+    animation: sectionShow 1s ease var(--animation-delay) forwards;
+}
+
+@keyframes sectionShow {
+    0% {
+        translate: 0% 100%;
+        opacity: 0;
+    }
+
+    70% {
+        translate: 0% -4%;
+        opacity: 1;
+    }
+
+    100% {
+        translate: 0% 0%;
+        opacity: 1;
+    }
+}
+
+.overflow-hiddent-wrapp {
+    overflow: hidden;
+}
+
+.hero.section-show .overflow-hiddent-wrapp > * {
+    position: relative;
+    translate: 0% 100%;
+    animation: sectionShowElement 1s ease calc(var(--animation-delay) + 0.5s) forwards;
+}
+
+@keyframes sectionShowElement {
+    from {
+        translate: 0% 100%;
+    }
+
+    to {
+        translate: 0% 0%;
+    }
+}
+
+.hero.section-show a.primary-button {
+    translate: 0% 100%;
+    opacity: 0;
+
+    animation: sectionShowElementBtn 1s ease calc(var(--animation-delay) + 0.5s) forwards;
+}
+
+@keyframes sectionShowElementBtn {
+    from {
+        translate: 0% 100%;
+        opacity: 0;
+    }
+
+    to {
+        translate: 0% 0%;
+        opacity: 1;
+    }
 }

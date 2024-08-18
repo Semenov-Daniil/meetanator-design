@@ -1,5 +1,5 @@
-let cntGradientBottom = [...document.getElementsByClassName('cnt-gradient-b'), ...document.getElementsByClassName('cnt-gradient-t')];
-console.log('test')
+const cntGradientBottom = [...document.getElementsByClassName('cnt-gradient-b'), ...document.getElementsByClassName('cnt-gradient-t')];
+
 cntGradientBottom.forEach(cnt => {
     cnt.addEventListener('mousemove',  (event) => {
         const blick = cnt.getElementsByClassName('grd-cnt-blick')[0];
