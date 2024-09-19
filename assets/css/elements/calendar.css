@@ -93,14 +93,15 @@
     box-shadow: 0 4px 10px 2px rgba(var(--main-bg-color-rgb), 0.3);
 
     transition: box-shadow 0.3s;
+}
 
-    & svg {
-        height: 40%;
+.calendar .calendar-inner .calendar-controls .calendar-prev svg,
+.calendar .calendar-inner .calendar-controls .calendar-next svg {
+   height: 40%;
         width: auto;
 
         stroke: var(--thi-color);
-        stroke-width: 3;
-    }
+        stroke-width: 3; 
 }
 
 .calendar .calendar-inner .calendar-controls .calendar-prev:hover,
@@ -109,23 +110,22 @@
 }
 
 .calendar .calendar-inner .calendar-today-date {
-    color: var(--thi-color);
-    text-align: center;
+    width: fit-content;
 
-    cursor: pointer;
-
-    background: rgba(var(--fou-color-rgb), 0.5);
-
-    padding: 8px 0px;
-
-    box-shadow: inset 0 0 0 1px hsla(0,0%,100%,.12), 0 0 0 1px rgba(0,0,0,.04);
-    border-radius: 0.25rem;
-
-    width: 80%;
-
+    padding: 0.5rem 1rem;
     margin-top: 10px;
     margin-left: auto;
     margin-right: auto;
+
+    color: var(--thi-color);
+    text-align: center;
+
+    background: rgba(var(--fou-color-rgb), 0.5);
+    
+    box-shadow: inset 0 0 0 1px hsla(0,0%,100%,.12), 0 0 0 1px rgba(0,0,0,.04);
+    border-radius: 0.25rem;
+    
+    cursor: pointer;
 }
 
 .calendar .calendar-inner .calendar-weekday {

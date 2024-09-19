@@ -33,6 +33,10 @@
     justify-content: space-between;
 }
 
+.jc-se {
+    justify-content: space-evenly;
+}
+
 .g-1 {
     gap: 10px;
 }

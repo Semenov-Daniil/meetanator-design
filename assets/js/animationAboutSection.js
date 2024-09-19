@@ -59,28 +59,28 @@ window.onload = function() {
         });
     }
 
-    if (aboutTitle) {
-        let aboutTitleAfterStyle = getCssStyle('.about .about-info-title::after');
-        aboutTitleAfterStyle.style.content = `"${aboutTitle.innerText}"`;
+    // if (aboutTitle) {
+    //     let aboutTitleAfterStyle = getCssStyle('.about .about-info-title::after');
+    //     aboutTitleAfterStyle.style.content = `"${aboutTitle.innerText}"`;
 
-        aboutTitle.innerHTML = "";
-        printChar(aboutTitle, aboutTitle.innerText, 80);
-    }
+    //     aboutTitle.innerHTML = "";
+    //     printChar(aboutTitle, aboutTitle.innerText, 80);
+    // }
 
-    if (aboutInfo) {
-        const aboutInfoExcretion = document.querySelector(".about-info-excretion");
-        const aboutInfoText = document.querySelector(".about-info-text");
+    // if (aboutInfo) {
+    //     const aboutInfoExcretion = document.querySelector(".about-info-excretion");
+    //     const aboutInfoText = document.querySelector(".about-info-text");
 
-        if (aboutInfoExcretion) {
-            let aboutInfoExcretionAfterStyle = getCssStyle('.about .about-info .about-info-excretion::after');
-            aboutInfoExcretionAfterStyle.style.content = `"${aboutInfoExcretion.innerHTML}"`;
-            printChar(aboutInfoExcretion, aboutInfoExcretion.innerHTML, 20);
-        }
+    //     if (aboutInfoExcretion) {
+    //         let aboutInfoExcretionAfterStyle = getCssStyle('.about .about-info .about-info-excretion::after');
+    //         aboutInfoExcretionAfterStyle.style.content = `"${aboutInfoExcretion.innerHTML}"`;
+    //         printChar(aboutInfoExcretion, aboutInfoExcretion.innerHTML, 20);
+    //     }
 
-        if (aboutInfoText) {
-            let aboutInfoTextAfterStyle = getCssStyle('.about .about-info .about-info-text::after');
-            aboutInfoTextAfterStyle.style.content = `"${aboutInfoText.innerHTML}"`;
-            printChar(aboutInfoText, aboutInfoText.innerHTML, 20we);
-        }
-    }
+    //     if (aboutInfoText) {
+    //         let aboutInfoTextAfterStyle = getCssStyle('.about .about-info .about-info-text::after');
+    //         aboutInfoTextAfterStyle.style.content = `"${aboutInfoText.innerHTML}"`;
+    //         printChar(aboutInfoText, aboutInfoText.innerHTML, 20we);
+    //     }
+    // }
 }
