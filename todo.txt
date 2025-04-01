@@ -1,0 +1,14 @@
+Design Examples:
+- https://www.raycast.com
+- https://business-consulting-service.vercel.app
+
+Ideas:
+- https://front.codes/
+- https://codepen.io/assets/
+- https://codepen.io/ig_design/pen/VgaXaY
+
+Todo:
+- Пересмотреть header
+- Поменять preloader
+- Минимизировать текст
+- Вынести на отдельные страницы создание встречи и вход/регистрацию
